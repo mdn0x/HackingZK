@@ -63,7 +63,7 @@ So we need the **codename** .
 
 We modify the user-agent in the request in [Developer tools](../../3%20-%20Tags/Hacking%20Concepts/Developer%20tools.md) and resend it, we find a page:
 
-<img src="../../Flameshots/a3e1cd23a665cff66f9bd84751957fff.png" alt="a3e1cd23a665cff66f9bd84751957fff.png" width="655" height="127" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/a3e1cd23a665cff66f9bd84751957fff.png" alt="a3e1cd23a665cff66f9bd84751957fff.png" width="655" height="127" class="jop-noMdConv">
 
 We have a username .
 
@@ -211,7 +211,7 @@ User james may run the following commands on agent-sudo:
 
 So we search for  `(All, !root) /bin/bash` and we got the [Exploit](../../3%20-%20Tags/Hacking%20Concepts/Exploit.md) :
 
-<img src="../../Flameshots/b8570c8b4541bfc528579b16a27cb7a3.png" alt="b8570c8b4541bfc528579b16a27cb7a3.png" width="396" height="286" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/b8570c8b4541bfc528579b16a27cb7a3.png" alt="b8570c8b4541bfc528579b16a27cb7a3.png" width="396" height="286" class="jop-noMdConv">
 
 ### Exploit
 

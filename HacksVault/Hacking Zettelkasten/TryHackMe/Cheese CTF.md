@@ -12,7 +12,7 @@ Tags : #easy #detailed
 
 We can scan the target with [Nmap](../../3%20-%20Tags/Hacking%20Tools/Nmap.md) an see almost every single port is open so we check if there's a website :
 
-<img src="../../Flameshots/12e629e6284f336b6c45d064daed713d.png" alt="12e629e6284f336b6c45d064daed713d.png" width="470" height="264" class="jop-noMdConv">                 <img src="../../Flameshots/b9fce4e8e6396254fe43b7386de9aad6.png" alt="b9fce4e8e6396254fe43b7386de9aad6.png" width="418" height="263" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/12e629e6284f336b6c45d064daed713d.png" alt="12e629e6284f336b6c45d064daed713d.png" width="470" height="264" class="jop-noMdConv">                 <img src="../../2%20-%20Resources/Others/Flameshots/b9fce4e8e6396254fe43b7386de9aad6.png" alt="b9fce4e8e6396254fe43b7386de9aad6.png" width="418" height="263" class="jop-noMdConv">
 
 # Enumeration
 ## Gobuster
@@ -41,7 +41,7 @@ We got a user.
 
 For the [Exploit](../../3%20-%20Tags/Hacking%20Concepts/Exploit.md) (RCE) we can use a [Shell](../../3%20-%20Tags/Hacking%20Concepts/Shell.md) through [php filter chain generator](../../3%20-%20Tags/Hacking%20Concepts/php%20filter%20chain%20generator.md) >> https://github.com/synacktiv/php_filter_chain_generator :
 
-<img src="../../Flameshots/2bc9b6775cab82cd126642935bc1c018.png" alt="2bc9b6775cab82cd126642935bc1c018.png" width="496" height="114" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/2bc9b6775cab82cd126642935bc1c018.png" alt="2bc9b6775cab82cd126642935bc1c018.png" width="496" height="114" class="jop-noMdConv">
 
 Example :
 
@@ -89,7 +89,7 @@ listening on [any] 1337 ...
 
 Now we insert the created chain in the url :
 
-<img src="../../Flameshots/a799d8f7be346af16bb877ab2ee69646.png" alt="a799d8f7be346af16bb877ab2ee69646.png" width="319" height="175" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/a799d8f7be346af16bb877ab2ee69646.png" alt="a799d8f7be346af16bb877ab2ee69646.png" width="319" height="175" class="jop-noMdConv">
 
 Now we should have the shell :
 

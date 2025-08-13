@@ -51,19 +51,19 @@ We start [Enumeration](../../3%20-%20Tags/Hacking%20Concepts/Enumeration.md) on 
 
 Admin panel :
 
-<img src="../../Flameshots/f2a4912e13d1ef42521e787e872e594a.png" alt="f2a4912e13d1ef42521e787e872e594a.png" width="605" height="430" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/f2a4912e13d1ef42521e787e872e594a.png" alt="f2a4912e13d1ef42521e787e872e594a.png" width="605" height="430" class="jop-noMdConv">
 
 So we have a username : Alex , and other profiles .
 
 If we go in the Admin page :
 
-<img src="../../Flameshots/4e19048fa6dd1845b735c2d7e6c63eb2.png" alt="4e19048fa6dd1845b735c2d7e6c63eb2.png" width="687" height="300" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/4e19048fa6dd1845b735c2d7e6c63eb2.png" alt="4e19048fa6dd1845b735c2d7e6c63eb2.png" width="687" height="300" class="jop-noMdConv">
 
 Here we have Adam,Josh and **Alex** .
 
 If we go in /etc :
 
-<img src="../../Flameshots/1d9d8b94dbd097e08bfd9c23fefb744e.png" alt="1d9d8b94dbd097e08bfd9c23fefb744e.png" width="323" height="128" class="jop-noMdConv">     <img src="../../Flameshots/6b0567a5641fbea623baa96e25d7dc25.png" alt="6b0567a5641fbea623baa96e25d7dc25.png" width="375" height="128" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/1d9d8b94dbd097e08bfd9c23fefb744e.png" alt="1d9d8b94dbd097e08bfd9c23fefb744e.png" width="323" height="128" class="jop-noMdConv">     <img src="../../Flameshots/6b0567a5641fbea623baa96e25d7dc25.png" alt="6b0567a5641fbea623baa96e25d7dc25.png" width="375" height="128" class="jop-noMdConv">
 
 So we look at passwd file ;
 
@@ -84,7 +84,7 @@ http_access allow auth_users
 
 Let's crack the [Hash](../../3%20-%20Tags/Hacking%20Concepts/Hash.md) but first we identify it somehow:
 
-<img src="../../Flameshots/2b034948597c949b75a7f169fda184f6.png" alt="2b034948597c949b75a7f169fda184f6.png" width="714" height="71" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/2b034948597c949b75a7f169fda184f6.png" alt="2b034948597c949b75a7f169fda184f6.png" width="714" height="71" class="jop-noMdConv">
 
 Now we can decrypt it :
 
@@ -92,13 +92,13 @@ Now we can decrypt it :
 
 We can also Download the archive :
 
-<img src="../../Flameshots/89d44d666afded63a90673df18909897.png" alt="89d44d666afded63a90673df18909897.png" width="201" height="121" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/89d44d666afded63a90673df18909897.png" alt="89d44d666afded63a90673df18909897.png" width="201" height="121" class="jop-noMdConv">
 
 And we have a repository, if we make a further look :
 
 ![4a5d223299c170cc3706ad88c4cf0292.png](../../2%20-%20Resources/Others/Flameshots/4a5d223299c170cc3706ad88c4cf0292.png)
 
-<img src="../../Flameshots/46e69d1d674342a348c48a3d692f116e.png" alt="46e69d1d674342a348c48a3d692f116e.png" width="537" height="354" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/46e69d1d674342a348c48a3d692f116e.png" alt="46e69d1d674342a348c48a3d692f116e.png" width="537" height="354" class="jop-noMdConv">
 
 And yes we have encrypted files so we have to decrypt them .
 
@@ -122,7 +122,7 @@ Enter passphrase for key /home/mdn0x/THM/CHALLENGES/Easy/Cyborg/home/field/dev/f
 
 Now we let's look in the directory and we have Alex home, we view note.txt :
 
-<img src="../../Flameshots/9442fd73d5a7da2b816141473e5175fe.png" alt="9442fd73d5a7da2b816141473e5175fe.png" width="453" height="97" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/9442fd73d5a7da2b816141473e5175fe.png" alt="9442fd73d5a7da2b816141473e5175fe.png" width="453" height="97" class="jop-noMdConv">
 
 boom !
 

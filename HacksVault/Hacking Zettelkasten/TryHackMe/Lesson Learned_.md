@@ -40,7 +40,7 @@ We can now enumerate with [Gobuster](../../3%20-%20Tags/Hacking%20Tools/Gobuster
 
 We have a login page, let's try [SQL Injection](../../3%20-%20Tags/Hacking%20Concepts/SQL%20Injection.md) with a valid username (found with hydra) : `username: martin' AND '1'='1' -- - ; passw :asdf` :
 
-<img src="../../Flameshots/d11bdce304c0c86f761e2ac0e0e0033c.png" alt="d11bdce304c0c86f761e2ac0e0e0033c.png" width="583" height="533">
+<img src="../../2%20-%20Resources/Others/Flameshots/d11bdce304c0c86f761e2ac0e0e0033c.png" alt="d11bdce304c0c86f761e2ac0e0e0033c.png" width="583" height="533">
 
 And we have the [Flag](../../3%20-%20Tags/Hacking%20Concepts/Flag.md) .
 

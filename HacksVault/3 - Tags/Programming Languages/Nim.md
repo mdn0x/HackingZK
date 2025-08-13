@@ -1,0 +1,1 @@
+Nim is a statically typed compiled systems programming language. It combines successful concepts from mature languages like [Python](./Python.md), [Ada](./Ada.md) and [Modula](./Modula.md). Its design focuses on efficiency, expressiveness, and elegance (in that order of priority).

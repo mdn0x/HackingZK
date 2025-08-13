@@ -1,0 +1,1 @@
+https://github.com/swisskyrepo/SSRFmap?tab=readme-ov-file#install-and-manual

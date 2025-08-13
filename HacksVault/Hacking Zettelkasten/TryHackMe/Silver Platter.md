@@ -106,27 +106,27 @@ we don't have results.
 
 Now we can explore the page :
 
-<img src="../../Flameshots/d1b1be5df78119cddbeef6779929840d.png" alt="d1b1be5df78119cddbeef6779929840d.png" width="384" height="193" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/d1b1be5df78119cddbeef6779929840d.png" alt="d1b1be5df78119cddbeef6779929840d.png" width="384" height="193" class="jop-noMdConv">
 
 if we go to Contact we have some info :
 
-<img src="../../Flameshots/c899c6d72f9fd1e77add1ed9f8bccd30.png" alt="c899c6d72f9fd1e77add1ed9f8bccd30.png" width="385" height="200" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/c899c6d72f9fd1e77add1ed9f8bccd30.png" alt="c899c6d72f9fd1e77add1ed9f8bccd30.png" width="385" height="200" class="jop-noMdConv">
 
 We have a username : <span style="color: rgb(45, 194, 107);">**scr1ptkiddy**</span> , and we have **[Silverpeas](../../3%20-%20Tags/Hacking%20Concepts/Silverpeas.md)** , we can perform some other enumerations .
 
 **Silverpeas :**
 
-<img src="../../Flameshots/8b4a2a58c257b70be528e35e316a3e3c.png" alt="8b4a2a58c257b70be528e35e316a3e3c.png" width="414" height="258" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/8b4a2a58c257b70be528e35e316a3e3c.png" alt="8b4a2a58c257b70be528e35e316a3e3c.png" width="414" height="258" class="jop-noMdConv">
 
 There's a Github project :
 
-<img src="../../Flameshots/2cdf0f33268fdefb43ea3111dac40a09.png" alt="2cdf0f33268fdefb43ea3111dac40a09.png" width="245" height="193" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/2cdf0f33268fdefb43ea3111dac40a09.png" alt="2cdf0f33268fdefb43ea3111dac40a09.png" width="245" height="193" class="jop-noMdConv">
 
 If we go to https://hub.docker.com/search?q=silverpeas
 
 We can read the documentation and even the [Source Code](../../3%20-%20Tags/Hacking%20Concepts/Source%20Code.md) and we find out we can access silverpeas login panel on port 8080 and directory /silverpeas :
 
-<img src="../../Flameshots/feed27646adb08a078d83acd1094c373.png" alt="feed27646adb08a078d83acd1094c373.png" width="376" height="282" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/feed27646adb08a078d83acd1094c373.png" alt="feed27646adb08a078d83acd1094c373.png" width="376" height="282" class="jop-noMdConv">
 
 If we look on Internet we find some CVEs, there are **Tyler CVEs** and an [AuthBypass](../../3%20-%20Tags/Hacking%20Concepts/AuthBypass.md) by a THM roomtester.
 
@@ -149,11 +149,11 @@ We can create a custom passwdlist based on the website with [Cewl](../../3%20-%2
 
 We create a new project with [Caido](../../3%20-%20Tags/Hacking%20Tools/Caido.md) , go to Intruder and open the built-in browser and we go to the website :
 
-<img src="../../Flameshots/df16dedda6ab7cf44bf714863fdc79ab.png" alt="df16dedda6ab7cf44bf714863fdc79ab.png" width="428" height="136" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/df16dedda6ab7cf44bf714863fdc79ab.png" alt="df16dedda6ab7cf44bf714863fdc79ab.png" width="428" height="136" class="jop-noMdConv">
 
 We go to the [Website](../../3%20-%20Tags/Hacking%20Concepts/Website.md) and type our username ;
 
-<img src="../../Flameshots/65389fddcc0e741352947c9e32659f7d.png" alt="65389fddcc0e741352947c9e32659f7d.png" width="411" height="227" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/65389fddcc0e741352947c9e32659f7d.png" alt="65389fddcc0e741352947c9e32659f7d.png" width="411" height="227" class="jop-noMdConv">
 
 Now we turn on Intercepting by clicking on Forwarding/Queuing button and Requests :
 
@@ -161,19 +161,19 @@ Now we turn on Intercepting by clicking on Forwarding/Queuing button and Request
 
 And when we hit login we have the request on [Caido](../../3%20-%20Tags/Hacking%20Tools/Caido.md) :
 
-<img src="../../Flameshots/ef7c27a12de03458db903f5fa257cc3b.png" alt="ef7c27a12de03458db903f5fa257cc3b.png" width="286" height="232" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/ef7c27a12de03458db903f5fa257cc3b.png" alt="ef7c27a12de03458db903f5fa257cc3b.png" width="286" height="232" class="jop-noMdConv">
 
 Now we send it to **Automate** and here we highlight the 'password' and click on + button :
 
-<img src="../../Flameshots/798f350c370193ead4beb4e3d727f1e1.png" alt="798f350c370193ead4beb4e3d727f1e1.png" width="567" height="285" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/798f350c370193ead4beb4e3d727f1e1.png" alt="798f350c370193ead4beb4e3d727f1e1.png" width="567" height="285" class="jop-noMdConv">
 
 Now we have our placeholder and we can upload our file of passwords, we add it in Files by clicking on upload:
 
-<img src="../../Flameshots/e0ade61da87dee25cfd9a7ddcb8ef17f.png" alt="e0ade61da87dee25cfd9a7ddcb8ef17f.png" width="581" height="253" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/e0ade61da87dee25cfd9a7ddcb8ef17f.png" alt="e0ade61da87dee25cfd9a7ddcb8ef17f.png" width="581" height="253" class="jop-noMdConv">
 
 Now we can choose it in the Automate page and hit Run :
 
-<img src="../../Flameshots/0830905a95a9a16ba45fe4eb510468d6.png" alt="0830905a95a9a16ba45fe4eb510468d6.png" width="411" height="241" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/0830905a95a9a16ba45fe4eb510468d6.png" alt="0830905a95a9a16ba45fe4eb510468d6.png" width="411" height="241" class="jop-noMdConv">
 
 We can sort by Status Number and wait for the request that produce 500 :  <span style="color: rgb(45, 194, 107);">**adipiscing**</span>
 
@@ -181,7 +181,7 @@ We can sort by Status Number and wait for the request that produce 500 :  <span
 
 Now we can log in with ' scr1ptkiddy: adipiscing ' credentials :
 
-<img src="../../Flameshots/4e8cc578b6960bde5e233ae5ec7a6d86.png" alt="4e8cc578b6960bde5e233ae5ec7a6d86.png" width="548" height="344" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/4e8cc578b6960bde5e233ae5ec7a6d86.png" alt="4e8cc578b6960bde5e233ae5ec7a6d86.png" width="548" height="344" class="jop-noMdConv">
 
 A lot of features, we can also try to use Tyler's CVEs to Exploit the machine from here .
 
@@ -189,17 +189,17 @@ A lot of features, we can also try to use Tyler's CVEs to Exploit the machine fr
 
 If we read the unread notification we have a see more page, we can further click on the notification and we are redirected in a in-site web page with a URL that crearly says ID=5 so we can think try if it's [IDOR](../../3%20-%20Tags/Hacking%20Concepts/IDOR.md) exploitable , we can try to change ID parameter to read other users notifications :
 
-<img src="../../Flameshots/a54d002d57951434a8f8b9164d9d2c5e.png" alt="a54d002d57951434a8f8b9164d9d2c5e.png" width="395" height="230" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/a54d002d57951434a8f8b9164d9d2c5e.png" alt="a54d002d57951434a8f8b9164d9d2c5e.png" width="395" height="230" class="jop-noMdConv">
 
 We can't change it in this windows cause it's a secured window and it won't work, but we can copy the URL and paste it in another normal page of our browser and change the ID :
 
-<img src="../../Flameshots/ebada84f79f3d7bbc3afc53de18fe84f.png" alt="ebada84f79f3d7bbc3afc53de18fe84f.png" width="462" height="194" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/ebada84f79f3d7bbc3afc53de18fe84f.png" alt="ebada84f79f3d7bbc3afc53de18fe84f.png" width="462" height="194" class="jop-noMdConv">
 
 So we can read other notifications .
 
 on ID=6 :
 
-<img src="../../Flameshots/6549912016dd03ccaf151b3c996b827c.png" alt="6549912016dd03ccaf151b3c996b827c.png" width="495" height="225" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/6549912016dd03ccaf151b3c996b827c.png" alt="6549912016dd03ccaf151b3c996b827c.png" width="495" height="225" class="jop-noMdConv">
 
 Username: tim
 

@@ -40,7 +40,7 @@ Using [Nmap](../../3%20-%20Tags/Hacking%20Tools/Nmap.md) we can enumerate a mach
 
 [SMB](../../3%20-%20Tags/Hacking%20Concepts/SMB.md) has two ports, 445 and 139.
 
-<img src="Flameshots/bkgVNy3.png" alt="" width="454" height="200" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/bkgVNy3.png" alt="" width="454" height="200" class="jop-noMdConv">
 
 ```
 ┌──(mdn0x㉿mdn0xonKali)-[~/THM/CHALLENGES/Easy/Kenobi]

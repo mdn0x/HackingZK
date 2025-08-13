@@ -59,13 +59,13 @@ OS details: Linux 4.15 - 5.19
 
 We have the **Corridor** :
 
-<img src="../../Flameshots/f215258511af35ebf6199c95b1daf4e6.png" alt="f215258511af35ebf6199c95b1daf4e6.png" width="392" height="333" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/f215258511af35ebf6199c95b1daf4e6.png" alt="f215258511af35ebf6199c95b1daf4e6.png" width="392" height="333" class="jop-noMdConv">
 
 We can pass the cursor on the doors and we have differents links .
 
 In the [Source Code](../../3%20-%20Tags/Hacking%20Concepts/Source%20Code.md) we can see them :
 
-<img src="../../Flameshots/0c13971650ccb2ba7c3c4f9fd310923e.png" alt="0c13971650ccb2ba7c3c4f9fd310923e.png" width="564" height="194" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/0c13971650ccb2ba7c3c4f9fd310923e.png" alt="0c13971650ccb2ba7c3c4f9fd310923e.png" width="564" height="194" class="jop-noMdConv">
 
 If we analize the codes online they are in [MD5](../../3%20-%20Tags/Hacking%20Concepts/MD5.md) so we can decode it and they are number 1-13 .
 
@@ -73,11 +73,11 @@ If we analize the codes online they are in [MD5](../../3%20-%20Tags/Hacking%20Co
 
 The room asks for exit, we can try to md5 with number 0 on [CyberChef](../../3%20-%20Tags/Hacking%20Tools/CyberChef.md) :
 
-<img src="../../Flameshots/0af2c25544d698e72692419e39b535d6.png" alt="0af2c25544d698e72692419e39b535d6.png" width="344" height="252" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/0af2c25544d698e72692419e39b535d6.png" alt="0af2c25544d698e72692419e39b535d6.png" width="344" height="252" class="jop-noMdConv">
 
 Now we can paste it in the page :
 
-<img src="../../Flameshots/ba13cc727cf2144b5c77b81f0d32d135.png" alt="ba13cc727cf2144b5c77b81f0d32d135.png" width="351" height="248">
+<img src="../../2%20-%20Resources/Others/Flameshots/ba13cc727cf2144b5c77b81f0d32d135.png" alt="ba13cc727cf2144b5c77b81f0d32d135.png" width="351" height="248">
 
 And we have our [Flag](../../3%20-%20Tags/Hacking%20Concepts/Flag.md) .
 

@@ -40,9 +40,9 @@ We can access to the relevant websites by adding the subdomains **“blog”** a
 
 if we go to support.futurevera.thm and we examine the certificate details for the website **“support.futurevera.thm” :**
 
- **<img src="../../Flameshots/391e642e3195276c0670daa9ae47bdee.png" alt="391e642e3195276c0670daa9ae47bdee.png" width="257" height="147">           <img src="../../Flameshots/9d1f4e9d7bfec6bf6d4fd6e462da1b72.png" alt="9d1f4e9d7bfec6bf6d4fd6e462da1b72.png" width="312" height="132">**
+ **<img src="../../2%20-%20Resources/Others/Flameshots/391e642e3195276c0670daa9ae47bdee.png" alt="391e642e3195276c0670daa9ae47bdee.png" width="257" height="147">           <img src="../../2%20-%20Resources/Others/Flameshots/9d1f4e9d7bfec6bf6d4fd6e462da1b72.png" alt="9d1f4e9d7bfec6bf6d4fd6e462da1b72.png" width="312" height="132">**
 
-<img src="../../Flameshots/7f89e7646fe4995ea4f0d9fc2b36422f.png" alt="7f89e7646fe4995ea4f0d9fc2b36422f.png" width="324" height="76">
+<img src="../../2%20-%20Resources/Others/Flameshots/7f89e7646fe4995ea4f0d9fc2b36422f.png" alt="7f89e7646fe4995ea4f0d9fc2b36422f.png" width="324" height="76">
 
 so we found another subdomain , we add it to our /etc/hosts file :
 

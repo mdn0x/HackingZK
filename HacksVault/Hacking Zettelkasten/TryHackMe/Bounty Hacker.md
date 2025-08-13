@@ -195,7 +195,7 @@ THM{CR1M3_SyNd1C4T3}
 
 ## HTTP (80)
 
-<img src="../../Flameshots/23662abdc395d0c0c864d28502cabaae.png" alt="23662abdc395d0c0c864d28502cabaae.png" width="597" height="296" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/23662abdc395d0c0c864d28502cabaae.png" alt="23662abdc395d0c0c864d28502cabaae.png" width="597" height="296" class="jop-noMdConv">
 
 # Privilege Escalation
 
@@ -218,7 +218,7 @@ Probably our initial attack vector.
 
 We search in [GTFObins](../../3%20-%20Tags/Hacking%20Tools/GTFObins.md) for tar :
 
-<img src="../../Flameshots/5153273165b1c8ae2f19b9e68f7feaa1.png" alt="5153273165b1c8ae2f19b9e68f7feaa1.png" width="573" height="104">
+<img src="../../2%20-%20Resources/Others/Flameshots/5153273165b1c8ae2f19b9e68f7feaa1.png" alt="5153273165b1c8ae2f19b9e68f7feaa1.png" width="573" height="104">
 
 Now we go in bin cause tar it's there and paste the command ;  
 <br/>

@@ -20,7 +20,7 @@ PORT   STATE SERVICE VERSION
 
 ```
 
-<img src="../../Flameshots/3b3445fefa04e48e5a22fa5fb692f618.png" alt="3b3445fefa04e48e5a22fa5fb692f618.png" width="419" height="203" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/3b3445fefa04e48e5a22fa5fb692f618.png" alt="3b3445fefa04e48e5a22fa5fb692f618.png" width="419" height="203" class="jop-noMdConv">
 
 So we find [NGINX](../../3%20-%20Tags/Hacking%20Concepts/NGINX.md) .
 # Enumeration
@@ -35,7 +35,7 @@ Starting gobuster in directory enumeration mode
 /hidden               (Status: 301) [Size: 169] [--> http://10.10.192.115/hidden/]
 ```
 
-<img src="../../Flameshots/7f64f13f52f30a05a82b37c682a8be9c.png" alt="7f64f13f52f30a05a82b37c682a8be9c.png" width="355" height="286">
+<img src="../../2%20-%20Resources/Others/Flameshots/7f64f13f52f30a05a82b37c682a8be9c.png" alt="7f64f13f52f30a05a82b37c682a8be9c.png" width="355" height="286">
 
 we can gobuster again the /hidden dir :
 
@@ -65,11 +65,11 @@ flag{f1rs7_fl4g}
 
 we can use again [Gobuster](../../3%20-%20Tags/Hacking%20Tools/Gobuster.md) to gain info about the other [Server](../../3%20-%20Tags/Hacking%20Concepts/Server.md) on port 65524 :
 
-<img src="../../Flameshots/4170a189c3da9be085898a1189303d26.png" alt="4170a189c3da9be085898a1189303d26.png" width="371" height="99">
+<img src="../../2%20-%20Resources/Others/Flameshots/4170a189c3da9be085898a1189303d26.png" alt="4170a189c3da9be085898a1189303d26.png" width="371" height="99">
 
 if we go to /robots.txt :
 
-<img src="../../Flameshots/6c888c893523014d86bf0021c73a450f.png" alt="6c888c893523014d86bf0021c73a450f.png" width="398" height="155" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/6c888c893523014d86bf0021c73a450f.png" alt="6c888c893523014d86bf0021c73a450f.png" width="398" height="155" class="jop-noMdConv">
 
 ### Hash identifier
 
@@ -83,11 +83,11 @@ Possible Hashs:
 [+] Domain Cached Credentials - MD4(MD4(($pass)).(strtolower($username)))
 ```
 
-<img src="../../Flameshots/33cd5c9637fd4a90f965375a0b2b96b6.png" alt="33cd5c9637fd4a90f965375a0b2b96b6.png" width="520" height="290" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/33cd5c9637fd4a90f965375a0b2b96b6.png" alt="33cd5c9637fd4a90f965375a0b2b96b6.png" width="520" height="290" class="jop-noMdConv">
 
 and now if we go to the main page on port 65524 and in the [Source Code](../../3%20-%20Tags/Hacking%20Concepts/Source%20Code.md) we find flag3 in clear text:
 
-<img src="../../Flameshots/06daf159a86267455a39ff70c83bf8c4.png" alt="06daf159a86267455a39ff70c83bf8c4.png" width="383" height="100">
+<img src="../../2%20-%20Resources/Others/Flameshots/06daf159a86267455a39ff70c83bf8c4.png" alt="06daf159a86267455a39ff70c83bf8c4.png" width="383" height="100">
 
 on the same page we find what looks like another string that we need [Decoding](../../3%20-%20Tags/Hacking%20Concepts/Decoding.md). The hint says: “its encoded with ba..”
 
@@ -95,7 +95,7 @@ on the same page we find what looks like another string that we need [Decoding](
 
 if we decode it in [Base62](../../3%20-%20Tags/Hacking%20Concepts/Base62.md) we notice it's a hidden directory : 
 
-<img src="../../Flameshots/dcb1b33e4bf4d36f97453ad4d6204191.png" alt="dcb1b33e4bf4d36f97453ad4d6204191.png" width="528" height="332">
+<img src="../../2%20-%20Resources/Others/Flameshots/dcb1b33e4bf4d36f97453ad4d6204191.png" alt="dcb1b33e4bf4d36f97453ad4d6204191.png" width="528" height="332">
 
 When we visit this directory, we are greeted with a page with a picture once again. we save the image and check it with [Steghide](../../3%20-%20Tags/Hacking%20Tools/Steghide.md). We are requested a password for this. The page source reveals another [Hash](../../3%20-%20Tags/Hacking%20Concepts/Hash.md) that we will need to crack. We are provided with a wordlist and a hint on what format the hash is. Time to fire up [JohnTheRipper](../../3%20-%20Tags/Hacking%20Tools/JohnTheRipper.md):
 

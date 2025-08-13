@@ -33,7 +33,7 @@ visiting the /simple directory we find the Copiright at the bottom of the page s
 
 using [Searchsploit](../../3%20-%20Tags/Hacking%20Tools/Searchsploit.md) in [Kali Linux](../../3%20-%20Tags/Hacking%20Tools/Kali%20Linux.md) we can find multiple choices, we can see there's [SQL Injection](../../3%20-%20Tags/Hacking%20Concepts/SQL%20Injection.md) :
 
-<img src="../../Flameshots/0234bae202bf67778940868e1c1d35bc.png" alt="0234bae202bf67778940868e1c1d35bc.png" width="368" height="420" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/0234bae202bf67778940868e1c1d35bc.png" alt="0234bae202bf67778940868e1c1d35bc.png" width="368" height="420" class="jop-noMdConv">
 
 we can copy it to our working directory from **[ExploitDB](../../3%20-%20Tags/Hacking%20Tools/ExploitDB.md)**
 

@@ -173,7 +173,7 @@ Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
 ## Enumeration
 ### HTTP 
 
-<img src="../../Flameshots/45a13adaf61306e43ed94ef5ee6a78bc.png" alt="45a13adaf61306e43ed94ef5ee6a78bc.png" width="351" height="259" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/45a13adaf61306e43ed94ef5ee6a78bc.png" alt="45a13adaf61306e43ed94ef5ee6a78bc.png" width="351" height="259" class="jop-noMdConv">
 
 ```
 <div class="bg"></div>

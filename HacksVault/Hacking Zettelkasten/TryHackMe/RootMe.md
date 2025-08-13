@@ -33,7 +33,7 @@ We can download the reverse shell from here https://github.com/pentestmonkey/php
 notice that we have to modify the [IP address](../../3%20-%20Tags/Hacking%20Concepts/IP%20address.md) in the code and target our [Vulnerable Machine](../../3%20-%20Tags/Hacking%20Concepts/Vulnerable%20Machine.md) :
 
 
-<img src="../../Flameshots/c11a62a3346b0561b978ba29613dd5e2.png" alt="c11a62a3346b0561b978ba29613dd5e2.png" width="261" height="153" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/c11a62a3346b0561b978ba29613dd5e2.png" alt="c11a62a3346b0561b978ba29613dd5e2.png" width="261" height="153" class="jop-noMdConv">
 
 ## Obtaining first access
 

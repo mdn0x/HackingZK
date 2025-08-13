@@ -41,7 +41,7 @@ An **iFrame**, also knowns as **Inline Frame**, is an element that loads another
 
 Great! In this way, we can see what is inside.
 
-<img src="../../Flameshots/ab648af66c5e1a369be62af9e5e89558.png" alt="ab648af66c5e1a369be62af9e5e89558.png" width="301" height="160">
+<img src="../../2%20-%20Resources/Others/Flameshots/ab648af66c5e1a369be62af9e5e89558.png" alt="ab648af66c5e1a369be62af9e5e89558.png" width="301" height="160">
 
 and with admin
 

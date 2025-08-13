@@ -83,15 +83,15 @@ Progress: 4746 / 4747 (99.98%)
 
 We try go to /content [Webpage](../../3%20-%20Tags/Hacking%20Concepts/Webpage.md) :
 
-<img src="../../Flameshots/f623c76a81666fa5f6d8a33a9e016b99.png" alt="f623c76a81666fa5f6d8a33a9e016b99.png" width="443" height="328" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/f623c76a81666fa5f6d8a33a9e016b99.png" alt="f623c76a81666fa5f6d8a33a9e016b99.png" width="443" height="328" class="jop-noMdConv">
 
 and to /content/inc :
 
-<img src="../../Flameshots/ee4ee05dba2cca11f08d07877e8db3fa.png" alt="ee4ee05dba2cca11f08d07877e8db3fa.png" width="422" height="204" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/ee4ee05dba2cca11f08d07877e8db3fa.png" alt="ee4ee05dba2cca11f08d07877e8db3fa.png" width="422" height="204" class="jop-noMdConv">
 
 We find a username and a hashed password in the file :
 
-<img src="../../Flameshots/c45c876f60ee44853aa419e6dea9f2c7.png" alt="c45c876f60ee44853aa419e6dea9f2c7.png" width="817" height="94" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/c45c876f60ee44853aa419e6dea9f2c7.png" alt="c45c876f60ee44853aa419e6dea9f2c7.png" width="817" height="94" class="jop-noMdConv">
 
 manager : **42f749ade7f9e195bf475f37a44cafcb**
 
@@ -114,11 +114,11 @@ And we have the password : **Password123**
 
 If we go to the content/as directory we have a login page :
 
-<img src="../../Flameshots/33f2c5208973a53f82c2157c109edbb6.png" alt="33f2c5208973a53f82c2157c109edbb6.png" width="310" height="304" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/33f2c5208973a53f82c2157c109edbb6.png" alt="33f2c5208973a53f82c2157c109edbb6.png" width="310" height="304" class="jop-noMdConv">
 
 Let's enter the cracked credentials :
 
-<img src="../../Flameshots/4ddc3e6bfc381f1197580361880037e2.png" alt="4ddc3e6bfc381f1197580361880037e2.png" width="625" height="427" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/4ddc3e6bfc381f1197580361880037e2.png" alt="4ddc3e6bfc381f1197580361880037e2.png" width="625" height="427" class="jop-noMdConv">
 
 # Exploit
 
@@ -126,7 +126,7 @@ Let's enter the cracked credentials :
 
 We search for SweetRice with [Searchsploit](../../3%20-%20Tags/Hacking%20Tools/Searchsploit.md) :
 
-<img src="../../Flameshots/de9f017b9d8cbe6fdd8faeb9d3586a35.png" alt="de9f017b9d8cbe6fdd8faeb9d3586a35.png" width="472" height="203" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/de9f017b9d8cbe6fdd8faeb9d3586a35.png" alt="de9f017b9d8cbe6fdd8faeb9d3586a35.png" width="472" height="203" class="jop-noMdConv">
 
 There are two vulnerabilities that could be applied here:
 
@@ -150,11 +150,11 @@ Customize Exploit For Your Self .
 
 So we go in Ads and upload the PentestMonkey [Reverse Shell](../../3%20-%20Tags/Hacking%20Concepts/Reverse%20Shell.md)but first we modify our [IP address](../../3%20-%20Tags/Hacking%20Concepts/IP%20address.md) :
 
-<img src="../../Flameshots/2e68cc6ef240c5105612418ee0debcde.png" alt="2e68cc6ef240c5105612418ee0debcde.png" width="296" height="163" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/2e68cc6ef240c5105612418ee0debcde.png" alt="2e68cc6ef240c5105612418ee0debcde.png" width="296" height="163" class="jop-noMdConv">
 
 We copy paste the text in the Ads prompt and upload it :
 
-<img src="../../Flameshots/d15c7ba3fcbfaca58b485d34e9a7833c.png" alt="d15c7ba3fcbfaca58b485d34e9a7833c.png" width="571" height="203" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/d15c7ba3fcbfaca58b485d34e9a7833c.png" alt="d15c7ba3fcbfaca58b485d34e9a7833c.png" width="571" height="203" class="jop-noMdConv">
 
 ## Netcat
 
@@ -166,7 +166,7 @@ nc -lvnp 1234
 
 This gives the reverse shell something to connect back to.
 
-<img src="../../Flameshots/3e3eb8cb1fbe2e85c52b7871c73beae2.png" alt="3e3eb8cb1fbe2e85c52b7871c73beae2.png" width="314" height="135" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/3e3eb8cb1fbe2e85c52b7871c73beae2.png" alt="3e3eb8cb1fbe2e85c52b7871c73beae2.png" width="314" height="135" class="jop-noMdConv">
 
 And once we click it we have it :
 

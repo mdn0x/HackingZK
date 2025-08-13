@@ -73,25 +73,25 @@ We can see a lot of open ports, let's firts visit the [Webpage](../../3%20-%20Ta
 
 We have a **Image extractor** :
 
-<img src="../../Flameshots/51bcef8aba357c5fecc6c459f7a7b263.png" alt="51bcef8aba357c5fecc6c459f7a7b263.png" width="502" height="244" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/51bcef8aba357c5fecc6c459f7a7b263.png" alt="51bcef8aba357c5fecc6c459f7a7b263.png" width="502" height="244" class="jop-noMdConv">
 
 So we try put an image and click [Metadata](../../3%20-%20Tags/Hacking%20Concepts/Metadata.md) and does what it says.
 
 We can see with [Developer tools](../../3%20-%20Tags/Hacking%20Concepts/Developer%20tools.md) in browser when we click **Get Metadata** what net call happen :
 
-<img src="../../Flameshots/5e97db702a7c99e5044e2090ddca6066.png" alt="5e97db702a7c99e5044e2090ddca6066.png" width="527" height="223" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/5e97db702a7c99e5044e2090ddca6066.png" alt="5e97db702a7c99e5044e2090ddca6066.png" width="527" height="223" class="jop-noMdConv">
 
 We can see what is running here  ( nmap missed cause it's not a common port ) :
 
-<img src="../../Flameshots/3d33dbb5483320c54fc0280e6df8fd96.png" alt="3d33dbb5483320c54fc0280e6df8fd96.png" width="295" height="264" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/3d33dbb5483320c54fc0280e6df8fd96.png" alt="3d33dbb5483320c54fc0280e6df8fd96.png" width="295" height="264" class="jop-noMdConv">
 
 So we search for [Exploit](../../3%20-%20Tags/Hacking%20Concepts/Exploit.md)s :
 
-<img src="../../Flameshots/0be8de443bdb18b22b92cc976c5c0174.png" alt="0be8de443bdb18b22b92cc976c5c0174.png" width="396" height="230" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/0be8de443bdb18b22b92cc976c5c0174.png" alt="0be8de443bdb18b22b92cc976c5c0174.png" width="396" height="230" class="jop-noMdConv">
 
 **[CVE-2018-1335](../../3%20-%20Tags/CVEs/CVE-2018-1335.md)** from **Rhino Security** (Tyler works here and created the rorom on THM) .
 
-<img src="../../Flameshots/869b72148cd4ead5ce55cec4be9fbb30.png" alt="869b72148cd4ead5ce55cec4be9fbb30.png" width="308" height="136" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/869b72148cd4ead5ce55cec4be9fbb30.png" alt="869b72148cd4ead5ce55cec4be9fbb30.png" width="308" height="136" class="jop-noMdConv">
 
 So we know our version is unpatched .
 
@@ -99,7 +99,7 @@ So we know our version is unpatched .
 
 We read all the report and we have an exploit :
 
-<img src="../../Flameshots/4511444b8ec50492621a4c8d827e69f2.png" alt="4511444b8ec50492621a4c8d827e69f2.png" width="353" height="155" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/4511444b8ec50492621a4c8d827e69f2.png" alt="4511444b8ec50492621a4c8d827e69f2.png" width="353" height="155" class="jop-noMdConv">
 
 We can copy it in a file in our working dir and execute it with [Python](../../3%20-%20Tags/Programming%20Languages/Python.md) 3 :
 
@@ -226,7 +226,7 @@ And we can run it with `winPEASx86.exe` .
 
 We find AlwaysInstalledElevated enabled :
 
-<img src="../../Flameshots/a92575f19d8abfd5964a8256ee4de576.png" alt="a92575f19d8abfd5964a8256ee4de576.png" width="673" height="69" class="jop-noMdConv">
+<img src="../../2%20-%20Resources/Others/Flameshots/a92575f19d8abfd5964a8256ee4de576.png" alt="a92575f19d8abfd5964a8256ee4de576.png" width="673" height="69" class="jop-noMdConv">
 
 We search it on Internet and find we can install **MSI** files with elevated permissions and exploit the machine with a [Reverse Shell](../../3%20-%20Tags/Hacking%20Concepts/Reverse%20Shell.md) l :
 

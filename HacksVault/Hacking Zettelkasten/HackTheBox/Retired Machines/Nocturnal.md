@@ -121,6 +121,7 @@ When exploring through the directory, it is reveal that there is another interes
 | tobias | 55c82b1ccd55ab219b3b109b07d5061d | {{REDACTED_PASSWD}} |
 | kavi   | f38cde1654b39fea2bd4f72f1ae4cdda | {{REDACTED_PASSWD}} |
 | e0Al5  | 101ad4543a96a7fd84908fd0d802e7db | N/A                 |
+
 We can retrieve the first flag :
 
 ```bash

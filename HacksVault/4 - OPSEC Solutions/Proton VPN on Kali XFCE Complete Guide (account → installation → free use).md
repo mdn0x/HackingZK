@@ -115,7 +115,7 @@ Read terminal output. Update packages and retry.
 
 1. Disconnect and temporarily disable **Kill Switch** in the app.
 2. Restart NetworkManager:
-3. 
+
 ```bash
 sudo systemctl restart NetworkManager
 ```

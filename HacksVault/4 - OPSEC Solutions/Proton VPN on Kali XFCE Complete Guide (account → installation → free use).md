@@ -82,13 +82,7 @@ Open **Settings** in the app.
 
 - **Kill Switch**: **On**. Blocks traffic if VPN drops.
 
-- **Auto‑connect on startup**: **On** if you want VPN at boot.
-
-- **DNS leak protection**: **On**.
-
-- **Allow LAN**: enable only if you need to see local devices.
-
-- **Split Tunneling**: optional. Exclude apps/sites you don’t want through VPN.
+- **Auto‑connect on startup**: **Fastest** if you want VPN at boot.
 ## Verify it works
 
 Check public IP and DNS.
@@ -121,7 +115,7 @@ Read terminal output. Update packages and retry.
 
 1. Disconnect and temporarily disable **Kill Switch** in the app.
 2. Restart NetworkManager:
-3. 
+
 ```bash
 sudo systemctl restart NetworkManager
 ```

@@ -401,7 +401,7 @@ If we cat the `monitor.sh` file, we will see the contents appended to the end. `
 $ sudo /home/nibbler/personal/stuff/ 
 
 root@Nibbles:/home/nibbler/personal/stuff# cat /root/root.txt
-de5e5d6619862a8aa5b9b212314e0cdd
+ HTB{{REDACTED_FLAG}}
 ```
 
 Pwned!

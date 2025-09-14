@@ -41,4 +41,4 @@ There's an email address in the [Source Code](../../../3%20-%20Tags/Hacking%20Co
 `jeremy` seems the dev username.
 # 🔒 Locked Content
 
-For full guide and scripts, support the project on [Buy Me a Coffee
+For full guide and scripts, support the project on [Buy Me a Coffee](https://buymeacoffee.com/mdn0x)

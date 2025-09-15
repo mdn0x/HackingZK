@@ -16,18 +16,16 @@ FFuf (Fuzz Faster U Fool) is a fast and flexible web fuzzing tool designed for d
 
 ### Installation
 
-FFuf can be installed easily using Go, as it is written in the Go programming language. Here’s how to install it:
+FFuf can be installed easily using [Go](../Programming%20Languages/Go.md), as it is written in the Go programming language. Here’s how to install it:
 
 ```bash
 go install github.com/ffuf/ffuf/v2@latest
 ```
 
 Make sure to add the Go binary path to your system's PATH variable if it’s not already included.
-
 ### Basic Commands
 
 Here are some common commands and options for using FFuf:
-
 #### 1. Basic Directory Fuzzing
 
 To perform a basic directory fuzzing operation, use the following command:
@@ -65,7 +63,7 @@ To save the results to a file, use the `-o` option:
 ffuf -u http://target.com/FUZZ -w /path/to/wordlist.txt -o results.json
 ```
 
-### Usage Example
+#### Usage Example
 
 Here’s an example of a complete command that fuzzes a target URL for hidden directories:
 
@@ -129,7 +127,7 @@ Let's use `ffuf` to demonstrate recursive fuzzing:
 [Status: 403, Size: 158, Words: 17, Lines: 11, Duration: 39ms]
 | URL | http://94.237.122.241:57697/
     * FUZZ: 
-
+<SNIP>
 ```
 
 Notice the addition of the `-recursion` flag. This tells `ffuf` to fuzz any directories it finds recursively. For example, if `ffuf` discovers an admin directory, it will automatically start a new fuzzing process on `http://localhost/admin/FUZZ`. In fuzzing scenarios where wordlists contain comments (lines starting with #), the `ffuf -ic` option proves invaluable. By enabling this option, `ffuf` intelligently ignores commented lines during fuzzing, preventing them from being treated as valid inputs.
@@ -155,7 +153,73 @@ To mitigate these risks, `ffuf` provides options for fine-tuning the recursive f
 $ ffuf -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -ic -u http://IP:PORT/FUZZ -e .html -recursion -recursion-depth 2 -rate 500
 
 ```
+# Parameter and Value Fuzzing
 
+Building upon the discovery of hidden directories and files, we now delve into parameter and value fuzzing. This technique focuses on manipulating the parameters and their values within web requests to uncover vulnerabilities in how the application processes input.
+
+Parameters are the messengers of the web, carrying vital information between your browser and the server that hosts the web application. They're like variables in programming, holding specific values that influence how the application behaves.
+
+## GET Parameters: Openly Sharing Information
+
+You'll often spot `GET` parameters right in the URL, following a question mark (`?`). Multiple parameters are strung together using ampersands (`&`). For example:
+
+```http
+https://example.com/search?query=fuzzing&category=security
+```
+
+In this URL:
+
+- `query` is a parameter with the value "fuzzing"
+- `category` is another parameter with the value "security"
+
+`GET` parameters are like postcards – their information is visible to anyone who glances at the URL. They're primarily used for actions that don't change the server's state, like searching or filtering.
+## POST Parameters: Behind-the-Scenes Communication
+
+While `GET` parameters are like open postcards, POST parameters are more like sealed envelopes, carrying their information discreetly within the body of the HTTP request. They are not visible directly in the URL, making them the preferred method for transmitting sensitive data like login credentials, personal information, or financial details.
+
+When you submit a form or interact with a web page that uses POST requests, the following happens:
+
+1. `Data Collection`: The information entered into the form fields is gathered and prepared for transmission.
+    
+2. `Encoding`: This data is encoded into a specific format, typically `application/x-www-form-urlencoded` or `multipart/form-data`:
+    
+    - `application/x-www-form-urlencoded`: This format encodes the data as key-value pairs separated by ampersands (`&`), similar to GET parameters but placed within the request body instead of the URL.
+    - `multipart/form-data`: This format is used when submitting files along with other data. It divides the request body into multiple parts, each containing a specific piece of data or a file.
+3. `HTTP Request`: The encoded data is placed within the body of an HTTP POST request and sent to the web server.
+    
+4. `Server-Side Processing`: The server receives the POST request, decodes the data, and processes it according to the application's logic.
+    
+
+Here's a simplified example of how a POST request might look when submitting a login form:
+
+```http
+
+POST /login HTTP/1.1
+Host: example.com
+Content-Type: application/x-www-form-urlencoded
+
+username=your_username&password=your_password
+```
+
+- `POST`: Indicates the HTTP method (POST).
+- `/login`: Specifies the URL path where the form data is sent.
+- `Content-Type`: Specifies how the data in the request body is encoded (`application/x-www-form-urlencoded` in this case).
+- `Request Body`: Contains the encoded form data as key-value pairs (`username` and `password`).
+
+```bash
+ffuf -u http://IP:PORT/post.php -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "y=FUZZ" -w /usr/share/seclists/Discovery/Web-Content/common.txt -mc 200 -v
+```
+
+The main difference here is the use of the `-d` flag, which tells `ffuf` that the payload ("`y=FUZZ`") should be sent in the request body as `POST` data.
+
+Again, you'll see mostly invalid parameter responses. The correct value will stand out with its `200 OK` status code.
+## Why Parameters Matter for Fuzzing
+
+Parameters are the gateways through which you can interact with a web application. By manipulating their values, you can test how the application responds to different inputs, potentially uncovering vulnerabilities. For instance:
+
+- Altering a product ID in a shopping cart URL could reveal pricing errors or unauthorized access to other users' orders.
+- Modifying a hidden parameter in a request might unlock hidden features or administrative functions.
+- Injecting malicious code into a search query could expose vulnerabilities like [Cross-site Scripting (XSS)](../Hacking%20Concepts/Cross-site%20Scripting%20(XSS).md) or [SQL Injection](../Hacking%20Concepts/SQL%20Injection.md) (SQLi).
 ## Conclusion
 
 FFuf is a powerful and efficient tool for web fuzzing, providing users with the ability to discover hidden resources and potential vulnerabilities in web applications. Its speed, flexibility, and customizable options make it an essential resource for penetration testers and security researchers. By utilizing the commands and options outlined, users can effectively conduct thorough fuzzing operations to enhance their security assessments.

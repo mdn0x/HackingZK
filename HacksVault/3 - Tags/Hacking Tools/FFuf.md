@@ -173,6 +173,13 @@ In this URL:
 - `category` is another parameter with the value "security"
 
 `GET` parameters are like postcards – their information is visible to anyone who glances at the URL. They're primarily used for actions that don't change the server's state, like searching or filtering.
+### Example Usage
+
+Parameter [Fuzzing](../Hacking%20Concepts/Fuzzing.md):
+
+```bash
+└─$ ffuf -w /home/mdn0x/HTB/Machines/Planning/fuzzDicts/paramDict/AllParam.txt -u http://94.237.61.242:52839/get.php?x=FUZZ  -c 
+```
 ## POST Parameters: Behind-the-Scenes Communication
 
 While `GET` parameters are like open postcards, POST parameters are more like sealed envelopes, carrying their information discreetly within the body of the HTTP request. They are not visible directly in the URL, making them the preferred method for transmitting sensitive data like login credentials, personal information, or financial details.
@@ -207,7 +214,7 @@ username=your_username&password=your_password
 - `Request Body`: Contains the encoded form data as key-value pairs (`username` and `password`).
 
 ```bash
-ffuf -u http://IP:PORT/post.php -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "y=FUZZ" -w /usr/share/seclists/Discovery/Web-Content/common.txt -mc 200 -v
+ffuf -u http://94.237.61.242:52839/post.php -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "y=FUZZ" -w /usr/share/seclists/Discovery/Web-Content/common.txt -mc 200 -v
 ```
 
 The main difference here is the use of the `-d` flag, which tells `ffuf` that the payload ("`y=FUZZ`") should be sent in the request body as `POST` data.
@@ -220,6 +227,14 @@ Parameters are the gateways through which you can interact with a web applicatio
 - Altering a product ID in a shopping cart URL could reveal pricing errors or unauthorized access to other users' orders.
 - Modifying a hidden parameter in a request might unlock hidden features or administrative functions.
 - Injecting malicious code into a search query could expose vulnerabilities like [Cross-site Scripting (XSS)](../Hacking%20Concepts/Cross-site%20Scripting%20(XSS).md) or [SQL Injection](../Hacking%20Concepts/SQL%20Injection.md) (SQLi).
-## Conclusion
+
+# Virtual Host and Subdomain Fuzzing
+
+Both virtual hosting (vhosting) and [Subdomain](../Hacking%20Concepts/Subdomain.md)s play pivotal roles in organizing and managing web content.
+
+Virtual hosting enables multiple websites or domains to be served from a single server or [IP address](../Hacking%20Concepts/IP%20address.md). Each vhost is associated with a unique domain name or hostname. When a client sends an HTTP request, the web server examines the `Host` header to determine which vhost's content to deliver. This facilitates efficient resource utilization and cost reduction, as multiple websites can share the same server infrastructure.
+
+Subdomains, on the other hand, are extensions of a primary domain name, creating a hierarchical structure within the domain. They are used to organize different sections or services within a website. For example, `blog.example.com` and `shop.example.com` are subdomains of the main domain `example.com`. Unlike vhosts, subdomains are resolved to specific IP addresses through DNS (Domain Name System) records.
+# Conclusion
 
 FFuf is a powerful and efficient tool for web fuzzing, providing users with the ability to discover hidden resources and potential vulnerabilities in web applications. Its speed, flexibility, and customizable options make it an essential resource for penetration testers and security researchers. By utilizing the commands and options outlined, users can effectively conduct thorough fuzzing operations to enhance their security assessments.

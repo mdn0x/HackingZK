@@ -73,9 +73,6 @@ You can customize various options to enhance your scans:
 - **-r**: Follow redirects.
 - **-s**: Specify which status codes to display (e.g., `200,204,301,302,403`).
 - **-o**: Output results to a file.
-
-
-
 ## Conclusion
 ### Benefits
 

@@ -235,6 +235,12 @@ Both virtual hosting (vhosting) and [Subdomain](../Hacking%20Concepts/Subdomain.
 Virtual hosting enables multiple websites or domains to be served from a single server or [IP address](../Hacking%20Concepts/IP%20address.md). Each vhost is associated with a unique domain name or hostname. When a client sends an HTTP request, the web server examines the `Host` header to determine which vhost's content to deliver. This facilitates efficient resource utilization and cost reduction, as multiple websites can share the same server infrastructure.
 
 Subdomains, on the other hand, are extensions of a primary domain name, creating a hierarchical structure within the domain. They are used to organize different sections or services within a website. For example, `blog.example.com` and `shop.example.com` are subdomains of the main domain `example.com`. Unlike vhosts, subdomains are resolved to specific IP addresses through DNS (Domain Name System) records.
+
+Example:
+
+```
+$ ffuf -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-110000.txt -H 'Host: FUZZ.inlanefreight.htb' -u http://inlanefreight.htb:33197 -
+```
 # Conclusion
 
 FFuf is a powerful and efficient tool for web fuzzing, providing users with the ability to discover hidden resources and potential vulnerabilities in web applications. Its speed, flexibility, and customizable options make it an essential resource for penetration testers and security researchers. By utilizing the commands and options outlined, users can effectively conduct thorough fuzzing operations to enhance their security assessments.

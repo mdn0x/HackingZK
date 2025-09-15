@@ -75,6 +75,53 @@ ffuf -u http://example.com/FUZZ -w /usr/share/wordlists/dirb/common.txt -mc all
 
 This command will search for all matching resources using the common directory wordlist.
 
-### Conclusion
+### Recursive Fuzzing with ffuf
+
+```bash
+└─$ ffuf -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -ic -v -u http://94.237.122.241:57697/FUZZ -e .html -recursion
+
+
+[Status: 403, Size: 158, Words: 17, Lines: 11, Duration: 272ms]
+| URL | http://94.237.122.241:57697/
+    * FUZZ: 
+
+[Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 39ms]
+| URL | http://94.237.122.241:57697/level1
+| --> | /level1/
+    * FUZZ: level1
+
+[INFO] Adding a new job to the queue: http://94.237.122.241:57697/level1/FUZZ
+
+[Status: 403, Size: 158, Words: 17, Lines: 11, Duration: 39ms]
+| URL | http://94.237.122.241:57697/
+    * FUZZ: 
+
+```
+
+Notice the addition of the `-recursion` flag. This tells `ffuf` to fuzz any directories it finds recursively. For example, if `ffuf` discovers an admin directory, it will automatically start a new fuzzing process on `http://localhost/admin/FUZZ`. In fuzzing scenarios where wordlists contain comments (lines starting with #), the `ffuf -ic` option proves invaluable. By enabling this option, `ffuf` intelligently ignores commented lines during fuzzing, preventing them from being treated as valid inputs.
+
+The fuzzing commences at the web root (`http://IP:PORT/FUZZ`). Initially, `ffuf` identifies a directory named `level1`, indicated by a `301 (Moved Permanently)` response. This signifies a redirection and prompts the tool to initiate a new fuzzing process within this directory, effectively branching out its search.
+
+As `ffuf` recursively explores `level1`, it uncovers two additional directories: `level2` and `level3`. Each is added to the fuzzing queue, expanding the search depth. Furthermore, an `index.html` file is discovered within `level1`.
+
+The fuzzer systematically works through its queue, identifying `index.html` files in both `level2` and `level3`. Notably, the `index.html` file within `level3` stands out due to its larger file size than the others.
+
+#### Be Responsible
+
+While recursive fuzzing is a powerful technique, it can also be resource-intensive, especially on large web applications. Excessive requests can overwhelm the target server, potentially causing performance issues or triggering security mechanisms.
+
+To mitigate these risks, `ffuf` provides options for fine-tuning the recursive fuzzing process:
+
+- `-recursion-depth`: This flag allows you to set a maximum depth for recursive exploration. For example, `-recursion-depth 2` limits fuzzing to two levels deep (the starting directory and its immediate subdirectories).
+- `-rate`: You can control the rate at which `ffuf` sends requests per second, preventing the server from being overloaded.
+- `-timeout`: This option sets the timeout for individual requests, helping to prevent the fuzzer from hanging on unresponsive targets.
+
+
+```bash
+$ ffuf -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -ic -u http://IP:PORT/FUZZ -e .html -recursion -recursion-depth 2 -rate 500
+
+```
+
+## Conclusion
 
 FFuf is a powerful and efficient tool for web fuzzing, providing users with the ability to discover hidden resources and potential vulnerabilities in web applications. Its speed, flexibility, and customizable options make it an essential resource for penetration testers and security researchers. By utilizing the commands and options outlined, users can effectively conduct thorough fuzzing operations to enhance their security assessments.

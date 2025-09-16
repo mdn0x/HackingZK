@@ -88,4 +88,6 @@ ENTRYPOINT ["/bin/bash"]
 ```
 # 🔒 Locked Content
 
-For full guide and scripts, support the project on [Buy Me a Coffee](https://buymeacoffee.com/mdn0x)
+This machine is currently an Active Box on HackTheBox, according to the platform policies the write-up will be disclosed to the public after it's retirement.
+
+If you need full access to guide and scripts, support the project on [Buy Me a Coffee](https://buymeacoffee.com/mdn0x)

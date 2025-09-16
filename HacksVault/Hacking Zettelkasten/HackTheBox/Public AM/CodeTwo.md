@@ -49,4 +49,6 @@ We can register to see what's in the dashboard:
 ![Pasted image 20250823131114.png](../../../2%20-%20Resources/Others/Flameshots/Pasted%20image%2020250823131114.png)
 # 🔒 Locked Content
 
-For full guide and scripts, support the project on [Buy Me a Coffee](https://buymeacoffee.com/mdn0x)
+This machine is currently an Active Box on HackTheBox, according to the platform policies the write-up will be disclosed to the public after it's retirement.
+
+If you need full access to guide and scripts, support the project on [Buy Me a Coffee](https://buymeacoffee.com/mdn0x)

@@ -29,3 +29,17 @@ OS details: Linux 4.15 - 5.19
 This machine is currently an Active Box on HackTheBox, according to the platform policies the write-up will be disclosed to the public after it's retirement.
 
 If you need full access to guide and scripts, support the project on [Buy Me a Coffee](https://buymeacoffee.com/mdn0x)
+
+## HINTS
+
+```bash
+└─$ cat hints                 
+
+User
+1 . Enumerate the udp ...
+2. Find Exploit
+
+Root
+
+CVE. Try to use linPEAS
+```

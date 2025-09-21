@@ -178,7 +178,7 @@ In this URL:
 Parameter [Fuzzing](../Hacking%20Concepts/Fuzzing.md):
 
 ```bash
-└─$ ffuf -w /home/mdn0x/HTB/Machines/Planning/fuzzDicts/paramDict/AllParam.txt -u http://94.237.61.242:52839/get.php?x=FUZZ  -c 
+└─$ ffuf -w /usr/share/wordlists/fuzzDicts/paramDict/AllParam.txt -u http://94.237.61.242:52839/get.php?x=FUZZ  -c 
 ```
 ## POST Parameters: Behind-the-Scenes Communication
 

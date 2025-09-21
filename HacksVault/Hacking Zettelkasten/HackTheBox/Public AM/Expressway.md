@@ -36,7 +36,7 @@ If you need full access to guide and scripts, support the project on [Buy Me a C
 └─$ cat hints                 
 
 User
-1 . Enumerate the udp ...
+1 . Enumerate udps
 2. Find Exploit
 
 Root

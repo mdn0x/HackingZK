@@ -1,5 +1,4 @@
 Active Directory (AD) is a directory service developed by Microsoft for Windows domain networks. It is used for managing computers and other devices on a network, providing authentication and authorization services, and enabling centralized management of resources. Below is a detailed overview of Active Directory, including its architecture, functionalities, common vulnerabilities, and exploitation methods.
-
 ## Overview of Active Directory
 
 ### Architecture

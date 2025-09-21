@@ -367,7 +367,7 @@ File 'ca_svc.ccache' already exists. Overwrite? (y/n - saying no will save with 
 [*] Trying to retrieve NT hash for 'ca_svc'
 [*] Restoring the old Key Credentials for 'ca_svc'
 [*] Successfully restored the old Key Credentials for 'ca_svc'
-[*] NT hash for 'ca_svc': ca0f4f9e9eb8a092addf53bb03fc98c8
+[*] NT hash for 'ca_svc': HTB{{REDACTED_HASH}}
 ```
 
 Finding vulnerable certificates:

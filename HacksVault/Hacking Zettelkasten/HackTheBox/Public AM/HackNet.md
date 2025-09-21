@@ -12,6 +12,7 @@ First we add the target IP to our /etc/hosts file, then we use [Rustscan](../../
 
 ```bash                                                                                         
 ┌──(mdn0x㉿mdn0xKali)-[~]
+└─$ rustscan -a hacknet.htb -- -A    
 
 Open 10.10.11.85:22
 Open 10.10.11.85:80

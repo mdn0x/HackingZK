@@ -1,0 +1,197 @@
+- - - 
+created : 22-09-2025 
+
+Tags : #medium 
+
+Released on 17 May 2025 (Season 8)
+- - - 
+# Machine Information
+
+As is common in real life pentests, you will start the Puppy box with credentials for the following account: `levi.james / KingofAkron2025!`
+# Recon
+## Rustscan - Nmap
+
+First we add the target IP to our /etc/hosts file, then we use [Rustscan](../../../3%20-%20Tags/Hacking%20Tools/Rustscan.md) that will pass the result to [Nmap](../../../3%20-%20Tags/Hacking%20Tools/Nmap.md) :
+
+```bash
+┌──(mdn0x㉿mdn0xKali)-[~/HTB/Machines/Puppy]
+└─$ rustscan -a puppy.htb -- -A 
+
+Open 10.10.11.70:53
+Open 10.10.11.70:88
+Open 10.10.11.70:111
+Open 10.10.11.70:135
+Open 10.10.11.70:139
+Open 10.10.11.70:389
+Open 10.10.11.70:445
+Open 10.10.11.70:464
+Open 10.10.11.70:593
+Open 10.10.11.70:636
+Open 10.10.11.70:2049
+Open 10.10.11.70:3260
+Open 10.10.11.70:3268
+Open 10.10.11.70:3269
+Open 10.10.11.70:5985
+Open 10.10.11.70:9389
+Open 10.10.11.70:49664
+Open 10.10.11.70:49667
+Open 10.10.11.70:49670
+Open 10.10.11.70:49674
+Open 10.10.11.70:49694
+Open 10.10.11.70:63157
+Open 10.10.11.70:63193
+
+PORT      STATE SERVICE       REASON          VERSION
+53/tcp    open  domain        syn-ack ttl 127 Simple DNS Plus
+88/tcp    open  kerberos-sec  syn-ack ttl 127 Microsoft Windows Kerberos (server time: 2025-09-22 16:45:24Z)
+111/tcp   open  rpcbind       syn-ack ttl 127 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/tcp6  rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  2,3,4        111/udp6  rpcbind
+|   100003  2,3         2049/udp   nfs
+|   100003  2,3         2049/udp6  nfs
+|   100005  1,2,3       2049/udp   mountd
+|   100005  1,2,3       2049/udp6  mountd
+|   100021  1,2,3,4     2049/tcp   nlockmgr
+|   100021  1,2,3,4     2049/tcp6  nlockmgr
+|   100021  1,2,3,4     2049/udp   nlockmgr
+|   100021  1,2,3,4     2049/udp6  nlockmgr
+|   100024  1           2049/tcp   status
+|   100024  1           2049/tcp6  status
+|   100024  1           2049/udp   status
+|_  100024  1           2049/udp6  status
+135/tcp   open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+139/tcp   open  netbios-ssn   syn-ack ttl 127 Microsoft Windows netbios-ssn
+389/tcp   open  ldap          syn-ack ttl 127 Microsoft Windows Active Directory LDAP (Domain: PUPPY.HTB0., Site: Default-First-Site-Name)
+445/tcp   open  microsoft-ds? syn-ack ttl 127
+464/tcp   open  kpasswd5?     syn-ack ttl 127
+593/tcp   open  ncacn_http    syn-ack ttl 127 Microsoft Windows RPC over HTTP 1.0
+636/tcp   open  tcpwrapped    syn-ack ttl 127
+2049/tcp  open  nlockmgr      syn-ack ttl 127 1-4 (RPC #100021)
+3260/tcp  open  iscsi?        syn-ack ttl 127
+3268/tcp  open  ldap          syn-ack ttl 127 Microsoft Windows Active Directory LDAP (Domain: PUPPY.HTB0., Site: Default-First-Site-Name)
+3269/tcp  open  tcpwrapped    syn-ack ttl 127
+5985/tcp  open  http          syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-title: Not Found
+|_http-server-header: Microsoft-HTTPAPI/2.0
+9389/tcp  open  mc-nmf        syn-ack ttl 127 .NET Message Framing
+49664/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49667/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49670/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49674/tcp open  ncacn_http    syn-ack ttl 127 Microsoft Windows RPC over HTTP 1.0
+49694/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+63157/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+63193/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows 2012 (85%)
+OS CPE: cpe:/o:microsoft:windows_server_2012:r2
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+Aggressive OS guesses: Microsoft Windows Server 2012 R2 (85%)
+
+```
+
+Notice we have [Windows](../../../3%20-%20Tags/Hacking%20Concepts/Windows.md) [Active Directory](../../../3%20-%20Tags/Hacking%20Concepts/Active%20Directory.md).
+# Enumeration
+## RPC (111)
+
+We can try user [Enumeration](../../../3%20-%20Tags/Hacking%20Concepts/Enumeration.md) on rpc with `rpcclient` :
+
+```shell
+┌──(mdn0x㉿mdn0xKali)-[~/HTB/Machines/Puppy]
+└─$ rpcclient puppy.htb -U levi.james
+
+rpcclient $> enumdomusers
+user:[Administrator] rid:[0x1f4]
+user:[Guest] rid:[0x1f5]
+user:[krbtgt] rid:[0x1f6]
+user:[levi.james] rid:[0x44f]
+user:[ant.edwards] rid:[0x450]
+user:[adam.silver] rid:[0x451]
+user:[jamie.williams] rid:[0x452]
+user:[steph.cooper] rid:[0x453]
+user:[steph.cooper_adm] rid:[0x457]
+```
+
+So we have users on the domain:
+
+```bash
+Administrator  
+Guest  
+krbtgt  
+levi.james  
+ant.edwards  
+adam.silver  
+jamie.williams  
+steph.cooper  
+steph.cooper_adm  
+```
+## SMB (445)
+### SMBmap
+
+We can use [SMBclient](../../../3%20-%20Tags/Hacking%20Tools/SMBclient.md) or [SMBmap](../../../3%20-%20Tags/SMBmap.md) on the target to list the shares:
+
+```bash
+┌──(mdn0x㉿mdn0xKali)-[~/HTB/Machines/Puppy]
+└─$ smbmap -H 10.10.11.70 -u levi.james -p 'KingofAkron2025!' 
+
+[+] IP: 10.10.11.70:445 Name: puppy.htb                 Status: Authenticated
+        Disk                                                    Permissions     Comment
+        ----                                                    -----------     -------
+        ADMIN$                                                  NO ACCESS       Remote Admin
+        C$                                                      NO ACCESS       Default share
+        DEV                                                     NO ACCESS       DEV-SHARE for PUPPY-DEVS
+        IPC$                                                    READ ONLY       Remote IPC
+        NETLOGON                                                READ ONLY       Logon server share 
+        SYSVOL                                                  READ ONLY       Logon server share 
+[|] Closing connections..                                                                                            [/] Closing connections..                                                                                            [-] Closing connections..                                                                                            [*] Closed 1 connections        
+```
+
+We can see the `DEV`directory that is currently inaccessible.
+## Bloodhound
+
+We add `dc.puppy.htb`to `/etc/hosts`, and then synchronize the time:
+
+```bash
+ntpdate puppy.htb
+```
+
+Now we use [Bloodhound](../../../3%20-%20Tags/Hacking%20Tools/Bloodhound.md) to collect data:
+
+```bash
+┌──(mdn0x㉿mdn0xKali)-[~/HTB/Machines/Puppy]
+└─$ bloodhound-python -u 'levi.james' -p 'KingofAkron2025!'  -d puppy.htb -ns 10.10.11.70 -c All --zip
+INFO: BloodHound.py for BloodHound LEGACY (BloodHound 4.2 and 4.3)
+INFO: Found AD domain: puppy.htb
+INFO: Getting TGT for user
+WARNING: Failed to get Kerberos TGT. Falling back to NTLM authentication. Error: Kerberos SessionError: KRB_AP_ERR_SKEW(Clock skew too great)
+INFO: Connecting to LDAP server: dc.puppy.htb
+INFO: Found 1 domains
+INFO: Found 1 domains in the forest
+INFO: Found 1 computers
+INFO: Connecting to LDAP server: dc.puppy.htb
+INFO: Found 10 users
+INFO: Found 56 groups
+INFO: Found 3 gpos
+INFO: Found 3 ous
+INFO: Found 19 containers
+INFO: Found 0 trusts
+INFO: Starting computer enumeration with 10 workers
+INFO: Querying computer: DC.PUPPY.HTB
+INFO: Done in 00M 23S
+INFO: Compressing output into 20250922133821_bloodhound.zip
+```
+
+We open the file withthe Bloodhound GUI.
+
+![Pasted image 20250922143720.png](../../../2%20-%20Resources/Others/Flameshots/Pasted%20image%2020250922143720.png)
+# Exploit
+
+# 🔒 Locked Content
+
+This machine is currently an Active Box on HackTheBox, according to the platform policies the write-up will be disclosed to the public after it's retirement.
+
+If you need full access to guide and scripts, support the project on [Buy Me a Coffee](https://buymeacoffee.com/mdn0x)

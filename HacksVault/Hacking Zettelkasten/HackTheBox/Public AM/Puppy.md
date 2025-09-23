@@ -132,7 +132,7 @@ steph.cooper_adm
 ## SMB (445)
 ### SMBmap
 
-We can use [SMBclient](../../../3%20-%20Tags/Hacking%20Tools/SMBclient.md) or [SMBmap](../../../3%20-%20Tags/SMBmap.md) on the target to list the shares:
+We can use [SMBclient](../../../3%20-%20Tags/Hacking%20Tools/SMBclient.md) or [SMBmap](../../../3%20-%20Tags/Hacking%20Tools/SMBmap.md) on the target to list the shares:
 
 ```bash
 ┌──(mdn0x㉿mdn0xKali)-[~/HTB/Machines/Puppy]
@@ -185,13 +185,10 @@ INFO: Done in 00M 23S
 INFO: Compressing output into 20250922133821_bloodhound.zip
 ```
 
-We open the file withthe Bloodhound GUI.
-
-![Pasted image 20250922143720.png](../../../2%20-%20Resources/Others/Flameshots/Pasted%20image%2020250922143720.png)
-# Exploit
+We open the file withthe Bloodhound GUI:
 
 # 🔒 Locked Content
 
-This machine is currently an Active Box on HackTheBox, according to the platform policies the write-up will be disclosed to the public after it's retirement.
+This machine is currently an **Active Box** on HackTheBox, according to the platform policies the write-up will be disclosed to the public after it's retirement.
 
 If you need full access to guide and scripts, support the project on [Buy Me a Coffee](https://buymeacoffee.com/mdn0x)

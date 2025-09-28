@@ -570,7 +570,7 @@ Mode                 LastWriteTime         Length Name
 
 
 *Evil-WinRM* PS C:\Users\Administrator\Desktop> type root.txt
-{{REDACTED_PASSWD}}
+{{REDACTED_FLAG}}
 ```
 
 Pwned!!

@@ -1,7 +1,10 @@
 ## Server Message Block (SMB)
 
-Server Message Block (SMB) is a network communication protocol primarily used for providing shared access to files, printers, and serial ports between nodes on a network. It allows applications to read and write to files and request services from server programs in a computer network. SMB is widely used in Windows environments but is also supported by other operating systems.
+Server Message Block (`SMB`) is a protocol most widely seen in Windows enterprise environments that enables sharing resources between hosts over common networking architectures. SMB is a connection-oriented protocol that requires user authentication from the host to the resource to ensure the user has correct permissions to use that resource or perform actions. In the past, SMB utilized NetBIOS as its transport mechanism over UDP ports 137 and 138. Since modern changes, SMB now supports direct TCP transport over port 445, NetBIOS over TCP port 139, and even the QUIC protocol.
 
+As a user, SMB provides us easy and convenient access to resources like printers, shared drives, authentication servers, and more. For this reason, SMB is very attractive to potential attackers as well.
+
+Like any other application that uses TCP as its transport mechanism, it will perform standard functions like the three-way handshake and acknowledging received packets. Let us take a second to look at some SMB traffic to familiarize ourselves.
 ### Overview of SMB
 
 1. **Purpose**:

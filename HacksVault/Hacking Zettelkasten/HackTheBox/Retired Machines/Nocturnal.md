@@ -49,6 +49,8 @@ HOP RTT      ADDRESS
 1   70.30 ms 10.10.14.1
 2   70.39 ms nocturnal.htb (10.10.11.64)
 ```
+
+Port 22 and 80.
 # Enumeration
 ## HTTP (80)
 
@@ -97,7 +99,9 @@ And we filter the results for length :
 We have admin, doctor, tobias, amanda, test22, dupa and majid users.
 ![Pasted image 20250813162953.png](../../../2%20-%20Resources/Others/Flameshots/Pasted%20image%2020250813162953.png)
 
-Output from the user [Enumeration](../../../3%20-%20Tags/Hacking%20Concepts/Enumeration.md) reveal that it is vulnerable to insecure direct object reference [IDOR](../../../3%20-%20Tags/Hacking%20Concepts/IDOR.md) whereby when visiting each users will reveal what files that available for user to download.
+Output from the user [Enumeration](../../../3%20-%20Tags/Hacking%20Concepts/Enumeration.md) reveal that it is vulnerable to insecure direct object reference [IDOR](../../../3%20-%20Tags/Hacking%20Concepts/IDOR.md) 
+
+so when visiting, each users will reveal what files are available to download.
 ### Admin Panel Access
 
 We download `amanda` file and find her password in it : **{{REDACTED_PASSWD}}** 
@@ -106,7 +110,7 @@ We download `amanda` file and find her password in it : **{{REDACTED_PASSWD}}**
 http://nocturnal.htb/view.php?username=amanda&file=privacy.odt
 ```
 
-Now we can login on the [Website](../../../3%20-%20Tags/Hacking%20Concepts/Website.md) with these credentials and we can access the admin panel and see the admin.php content :
+Now we can login on the [Website](../../../3%20-%20Tags/Hacking%20Concepts/Website.md) with these credentials and we can access the admin panel and see the `admin.php` content :
 
 ![Pasted image 20250813164047.png](../../../2%20-%20Resources/Others/Flameshots/Pasted%20image%2020250813164047.png)
 
@@ -116,12 +120,11 @@ When exploring through the directory, it is reveal that there is another interes
 
 | User   | Password                         | Decrypted           |
 | ------ | -------------------------------- | ------------------- |
-| admin  | d725aeba143f575736b07e045d8ceebb | N/A                 |
-| amanda | df8b20aa0c935023f99ea58358fb63c4 | N/A                 |
+| admin  | d725aeba143f575736b07e045d8ceebb |                     |
+| amanda | df8b20aa0c935023f99ea58358fb63c4 |                     |
 | tobias | 55c82b1ccd55ab219b3b109b07d5061d | {{REDACTED_PASSWD}} |
 | kavi   | f38cde1654b39fea2bd4f72f1ae4cdda | {{REDACTED_PASSWD}} |
-| e0Al5  | 101ad4543a96a7fd84908fd0d802e7db | N/A                 |
-
+| e0Al5  | 101ad4543a96a7fd84908fd0d802e7db |                     |
 We can retrieve the first flag :
 
 ```bash
@@ -129,11 +132,11 @@ We can retrieve the first flag :
 └─$ ssh tobias@nocturnal.htb                  
 
 tobias@nocturnal:~$ cat user.txt 
- {{REDACTED_FLAG}
+ HTB{{REDACTED_FLAG}}
 ```
 # Privilege Escalation
 
-We can't run `sudo`, checking network statistics shows the open port at `127.0.0.1:8080` that are run locally which may link to the `ispconfig` in /var/www folder :
+We can't run `sudo`, checking network statistics, they shows the open port at `127.0.0.1:8080` that are run locally which may link to the `ispconfig` in `/var/www` directory :
 
 ```bash
 tobias@nocturnal:/var/www$ ls
@@ -159,7 +162,7 @@ udp        0      0 127.0.0.53:53           0.0.0.0:*
 
 We can access the web `ispconfig` with port forwarding on [SSH](../../../3%20-%20Tags/Hacking%20Concepts/SSH.md) :
 
-```
+```bash
 ┌──(mdn0x㉿mdn0xKali)-[~/HTB/Machines/Nocturnal]
 └─$ ssh -L 8080:127.0.0.1:8080 tobias@nocturnal.htb -N
 
@@ -188,7 +191,7 @@ pip install bs4
 pip install base64
 ```
 
-Now we change the **exploit.py** code to match our system and open a [Netcat](../../../3%20-%20Tags/Hacking%20Tools/Netcat.md) listener on the same port inserted, then we can execute the following command :
+Now we change the **exploit.py** code to match our system and open a [Netcat](../../../3%20-%20Tags/Hacking%20Tools/Netcat.md) listener on the same port inserted, then we can execute the following command:
 
 ```bash
 ┌──(.venv)─(mdn0x㉿mdn0xKali)-[~/HTB/Machines/Nocturnal]
@@ -213,7 +216,7 @@ root.txt
 scripts
 root@nocturnal:~# cat roo
 cat root.txt 
- {{REDACTED_FLAG}
+ HTB{{REDACTED_FLAG}}
 ```
 
 Pwned !!

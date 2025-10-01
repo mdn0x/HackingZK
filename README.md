@@ -10,7 +10,7 @@ According to platforms rules Active Machines writeups are not public, all flags 
 -Personal Labs
 
 ## Other content
-I created this Zettelkasten in Obsidian using Wikilinks, then pushed on Github appropriately changing formatting, so navigating through the notes you can click on the links to be redirected to the other content and their relative explanation (the other content is located in the Tags folder):
+I created this Zettelkasten in Obsidian using Wikilinks, then pushed on Github appropriately changing the format, so navigating through the notes you can click on the links to be redirected to the other content and their relative explanation (the other content is located in the Tags folder):
 - CVEs
 - Hacking concepts
 - Hacking tools

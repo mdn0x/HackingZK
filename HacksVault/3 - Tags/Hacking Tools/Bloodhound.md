@@ -105,3 +105,18 @@ Here we can upload our files:
 Now we can visualize and query in the Explore page.
 
 ![Pasted image 20250922220934.png](../../2%20-%20Resources/Others/Flameshots/Pasted%20image%2020250922220934.png)
+
+### Collect
+
+First synchronize the time:
+
+```bash
+sudo ntpdate tombwatcher.htb
+```
+
+Now collect:
+
+```bash
+┌──(mdn0x㉿mdn0xKali)-[~/HTB/Machines/TombWatcher/user]
+└─$ bloodhound-python -u 'user' -p 'passwd'  -d domain.name -ns Victim_IP -c All --zip
+```

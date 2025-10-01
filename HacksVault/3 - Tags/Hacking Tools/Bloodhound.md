@@ -120,3 +120,11 @@ Now collect:
 ┌──(mdn0x㉿mdn0xKali)-[~/HTB/Machines/TombWatcher/user]
 └─$ bloodhound-python -u 'user' -p 'passwd'  -d domain.name -ns Victim_IP -c All --zip
 ```
+
+With `nxc`
+
+```bash
+nxc ldap domain.name -u 'user.name' -p 'passwd' --bloodhound --collection All
+```
+
+Check netexec.wiki/getting-started/dns-option

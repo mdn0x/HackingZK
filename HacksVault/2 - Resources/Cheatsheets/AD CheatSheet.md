@@ -185,16 +185,20 @@ If you can find `dpapi` encrypted data and keys:
 ```
 ### Cracking
 
-crack the key:
+1. crack the key:
 ```bash
 impacket-dpapi masterkey -file 08949382-134f-4c63-b93c-ce52efc0aa88 -sid S-1-5-21-3927696377-1337352550-2781715495-1110 -password Password
 ```
 
-Crack creds
+2. Crack creds
 ```bash
 impacket-dpapi credential -file 772275FAD58525253490A9B0039791D3 -key keyfrommasterkey
 ```
 
+OR crack the hash
+```
+impacket-secretsdump -sam SAM -system SYSTEM local
+```
 ## Secrets Dump 
 
 If you can find the `SYSTEM` and `NTDS` files grab them, possibly with a listener:

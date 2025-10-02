@@ -138,6 +138,10 @@ $krb5tgs$23$*user2$DOMAIN.HTB$machine.htb/User2*$0e83983aba480c3219b96987f20b128
 [+] Password changed successfully!
 ```
 
+OR
+```bash
+net rpc "name" "passwd" -U "machine.htb"/"user2.name"%"password" -S 'IP'
+```
 ## GMSADumper
 
 **ReadGMSAPasswords**

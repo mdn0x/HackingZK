@@ -77,6 +77,12 @@ Collect with [Bloodhound](../../3%20-%20Tags/Hacking%20Tools/Bloodhound.md):
  bloodhound-python -u 'user' -p 'passwd' -d domain.htb -ns 10.10.11.xx -c All --zip # -p or --hashes
 ```
 
+Collect with `nxc`:
+
+```bash
+nxc ldap dc.machine.htb -u 'user.name' -p 'passwd' --bloodhound --collection All --dns-server IP
+```
+
 Checks
 ```bash
 'OUTBOUND OBJECT CONTROL'

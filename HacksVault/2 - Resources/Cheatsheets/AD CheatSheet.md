@@ -40,7 +40,7 @@ smbclient -L \\\\domain.name\\ -U user # If you have creds
 
 OR
 ```bash
-netexec smb dc.domain.htb -u user.name -p 'passwd' -k --shares --smb-timeout 500   # -k is for ticket usage
+nxc smb dc.domain.htb -u user.name -p 'passwd' -k --shares --smb-timeout 500   # -k is for ticket usage
 
 impacket-smbclient -k dc.machine.htb # To connect usage: shares, use share, ls, cd, get  
 ```

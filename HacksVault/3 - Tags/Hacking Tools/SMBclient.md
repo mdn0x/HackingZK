@@ -26,27 +26,27 @@ SMBclient is a command-line tool that allows users to access and interact with s
 
 ### Example Commands
 
-1. **Connecting to a Remote Share**:
+1. **Connecting:
    ```
-   smbclient //server/share -U username
+   smbclient -L \\\\domain.name\\ -U username
    ```
-   This command connects to the specified share on the server using the provided username.
+
 
 2. **Listing Files in a Share**:
    ```
-   smbclient //server/share -U username -c 'ls'
+   smbclient -L \\\\domain.name\\share -U username -c 'ls'
    ```
    This command lists the files in the specified share.
 
 3. **Uploading a File**:
    ```
-   smbclient //server/share -U username -c 'put localfile.txt remotefile.txt'
+   smbclient -L \\\\domain.name\\ -U username -c 'put localfile.txt remotefile.txt'
    ```
    This command uploads `localfile.txt` to the remote share as `remotefile.txt`.
 
 4. **Downloading a File**:
    ```
-   smbclient //server/share -U username -c 'get remotefile.txt localfile.txt'
+   smbclient -L \\\\domain.name\\ -U username -c 'get remotefile.txt localfile.txt'
    ```
 
    This command downloads `remotefile.txt` from the remote share to the local system as `localfile.txt`.

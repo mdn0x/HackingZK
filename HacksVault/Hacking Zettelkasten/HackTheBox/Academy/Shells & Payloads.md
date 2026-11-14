@@ -792,7 +792,7 @@ The Antak files can be found in the `/usr/share/nishang/Antak-WebShell` director
 Antak web shell functions like a Powershell Console. However, it will execute each command as a new process. It can also execute scripts in memory and encode commands you send. As a web shell, Antak is a pretty powerful tool.
 ### Q&A
 
-1. Where is the Antak webshell located on Pwnbox? Submit the full path. (Format:/path/to/antakwebshell)    `/usr/share/nishang/Antak/antak.aspx`
+1. Where is the Antak webshell located on Pwnbox? Submit the full path. (Format:/path/to/antakwebshell)    `/usr/share/nishang/Antak-WebShell/antak.aspx`
 
 2. Establish a web shell with the target using the concepts covered in this section. Submit the name of the user on the target that the commands are being issued as. In order to get the correct answer you must navigate to the web shell you upload using the vHost name.     `iis apppool\status`
 
@@ -861,7 +861,7 @@ shell.php
 ---
 # The Live Engagement
 
-[The Live Engagement - Shells&Payloads Skill Assessment](../../../The%20Live%20Engagement%20-%20Shells&Payloads%20Skill%20Assessment.md)
+[The Live Engagement - Shells & Payloads Skill Assessment](../../../The%20Live%20Engagement%20-%20Shells%20&%20Payloads%20Skill%20Assessment.md)
 
 # Additional Considerations
 ## Detection & Prevention

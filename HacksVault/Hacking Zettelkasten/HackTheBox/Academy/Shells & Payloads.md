@@ -196,7 +196,7 @@ The one-liner we just examined together can also be executed in the form of a Po
 
 Understanding what different types of payloads are doing can help us understand why AV is blocking us from execution and give us some idea of what we might need to change in our code to bypass restrictions. This is something we will explore further in this module. For now, understand that the payloads we use to get a shell on a system will largely be determined by what OS, shell interpreter languages, and even programming languages are present on the target.
 
-Not all payloads are one-liners and deployed manually like those we studied in this section. Some are generated using automated attack frameworks and deployed as a pre-packaged/automated attack to obtain a shell. Like in the very powerful [Metasploit](../../../3%20-%20Tags/Hacking%20Tools/Metasploit.md)-framework, which we will work with in the next section.
+Not all payloads are one-liners and deployed manually like those we studied in this section. Some are generated using automated attack frameworks and deployed as a pre-packaged/automated attack to obtain a shell. Like in the very powerful [Metasploit-Framework (MSF)](../../../3%20-%20Tags/Hacking%20Tools/Metasploit-Framework%20(MSF).md)-framework, which we will work with in the next section.
 ## Automating Payloads & Delivery with Metasploit
 
 [Metasploit](https://www.metasploit.com) is an automated attack framework developed by `Rapid7` that streamlines the process of exploiting vulnerabilities through the use of pre-built modules that contain easy-to-use options to exploit vulnerabilities and deliver payloads to gain a shell on a vulnerable system. It can make exploiting a vulnerable system so easy that some Cybersecurity training vendors limit how many times it can be used on lab exams. Here at Hack The Box, we encourage experimenting with tools in our lab environments until you have a solid foundational understanding. Most organizations will not limit us on which tools we can or cannot use on an engagement. However, they will expect us to know what we are doing. Therefore, it is our responsibility to seek an understanding as we learn. Not understanding the effects of the tools we use can be destructive in a live penetration test or audit. This is one primary reason we should consistently seek a deeper understanding of the tools, techniques, methodologies, and practices we learn.
@@ -214,7 +214,7 @@ We can see there is creative ASCII art presented as the banner at launch and som
 
 These numbers can change as the maintainers add and remove code or if you import a module for use into Metasploit. Let's get familiar with Metasploit payloads by using a classic `exploit module` that can be used to compromise a Windows system. Remember that Metasploit can be used for more than just exploitation. We can also use different modules to scan & enumerate targets.
 
-In this case, we will be using enumeration results from a [Nmap](../../../3%20-%20Tags/Hacking%20Tools/Nmap.md) scan to pick a [Metasploit](../../../3%20-%20Tags/Hacking%20Tools/Metasploit.md) module to use.
+In this case, we will be using enumeration results from a [Nmap](../../../3%20-%20Tags/Hacking%20Tools/Nmap.md) scan to pick a [Metasploit-Framework (MSF)](../../../3%20-%20Tags/Hacking%20Tools/Metasploit-Framework%20(MSF).md) module to use.
 
 In the output, we see several standard ports that are typically open on a [Windows](../../../3%20-%20Tags/Hacking%20Concepts/Windows.md) system by default. Remember that scanning and  [Enumeration](../../../3%20-%20Tags/Hacking%20Concepts/Enumeration.md) is an excellent way to know what OS (Windows or Linux) our target is running to find an appropriate module to run with Metasploit. Let's go with [SMB](../../../3%20-%20Tags/Hacking%20Concepts/SMB.md) (listening on `445`) as the potential attack vector.
 
@@ -861,7 +861,7 @@ shell.php
 ---
 # The Live Engagement
 
-[The Live Engagement - Shells & Payloads Skill Assessment](../../../The%20Live%20Engagement%20-%20Shells%20&%20Payloads%20Skill%20Assessment.md)
+[The Live Engagement - Shells & Payloads Skill Assessment](./The%20Live%20Engagement%20-%20Shells%20&%20Payloads%20Skill%20Assessment.md)
 
 # Additional Considerations
 ## Detection & Prevention

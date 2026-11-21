@@ -30,6 +30,17 @@ cewl http://example.com -w wordlist.txt
 ```
 This command will scrape the content from `http://example.com` and save the generated wordlist to `wordlist.txt`.
 
+## Generating wordlists using CeWL
+
+We can use a tool called [CeWL](https://github.com/digininja/CeWL) to scan potential words from a company's website and save them in a separate list. We can then combine this list with the desired rules to create a customized password list—one that has a higher probability of containing the correct password for an employee. We specify some parameters, like the depth to spider (`-d`), the minimum length of the word (`-m`), the storage of the found words in lowercase (`--lowercase`), as well as the file where we want to store the results (`-w`).
+
+```bash
+mdn0x@htb[/htb]$ cewl https://www.inlanefreight.com -d 4 -m 6 --lowercase -w inlane.wordlist
+mdn0x@htb[/htb]$ wc -l inlane.wordlist
+
+326
+```
+
 ### Considerations
 
 While Cewl is a powerful tool for generating custom wordlists, it should be used ethically and responsibly. Unauthorized scraping of websites without permission can lead to legal and ethical issues. Always ensure that you have explicit permission before conducting any information gathering activities.

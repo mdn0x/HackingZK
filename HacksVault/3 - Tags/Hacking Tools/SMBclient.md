@@ -49,4 +49,4 @@ SMBclient is a command-line tool that allows users to access and interact with s
    smbclient -L \\\\domain.name\\ -U username -c 'get remotefile.txt localfile.txt'
    ```
 
-   This command downloads `remotefile.txt` from the remote share to the local system as `localfile.txt`.
+This command downloads `remotefile.txt` from the remote share to the local system as `localfile.txt`.

@@ -310,7 +310,6 @@ Use a dictionary attack with rules to crack the second password hash. (Hash: 1b0
 1b0556a75770563578569ae21392630c:c0wb0ys1 
 ```
 
-
 Use a mask attack to crack the third password hash. (Hash: 1e293d6912d074c0fd15844d803400dd)
 
 ```bash
@@ -3701,7 +3700,6 @@ mdn0x@htb[/htb]$ mv chisel_* chisel && chmod +x ./chisel
 mdn0x@htb[/htb]$ sudo ./chisel server --reverse 
 ```
 
-
 Connect to `MS01` via RDP and execute chisel (located in C:\Tools).
 
 ```bash
@@ -4291,7 +4289,7 @@ As new technology and standards evolve, we need to investigate and understand th
 There are many options available for protecting passwords. Choosing the right one depends on the specific needs of the individual or organization. It is common for both people and companies to use different password protection methods for different purposes.
 
 Continue to:
-[Skills Assessment - Password Attacks](../../../Skills%20Assessment%20-%20Password%20Attacks.md)
+[Skills Assessment - Password Attacks](./Skills%20Assessment%20-%20Password%20Attacks.md)
 
 ---
 

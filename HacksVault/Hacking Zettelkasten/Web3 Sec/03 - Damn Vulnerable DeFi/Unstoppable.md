@@ -6,6 +6,7 @@ tags:
   - fundamentals
   - easy
   - erc4626
+  - foundry
 ---
  
 # 1. Overview of the Files

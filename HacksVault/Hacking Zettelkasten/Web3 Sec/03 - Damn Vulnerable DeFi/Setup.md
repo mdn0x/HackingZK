@@ -2,6 +2,7 @@
 Created: 24-11-2026
 tags:
   - web3
+  - foundry
 ---
 First Install [Foundry](../01%20-%20Tooling/Foundry.md) then clone and build the "gym" from `damn-vulnerable-defi`:
 

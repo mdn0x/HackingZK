@@ -4,6 +4,8 @@ tags:
   - web3
   - easy
   - EIP-2771
+  - foundry
+  - EIP-712
 ---
 # 1. Overview of the Files
 ## Scenario & Objective

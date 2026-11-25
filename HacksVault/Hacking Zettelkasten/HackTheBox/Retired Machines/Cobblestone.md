@@ -436,7 +436,7 @@ if ($conn->connect_errno > 0) {
 Let's try on [MySQL](../../../3%20-%20Tags/Hacking%20Tools/MySQL.md):
 
 ```bash
-www-data@cobblestone:/var/www/html/db$ mysql -h 127.0.0.1 -u dbuser -p'aichooDeeYanaekungei9rogi0eMuo2o'
+www-data@cobblestone:/var/www/html/db$ mysql -h 127.0.0.1 -u dbuser -p'HTB{REDACTED_PASSWD}'
 
 MariaDB [(none)]> use cobblestone;
 MariaDB [vote]> select * from users;
